@@ -1,14 +1,14 @@
 {
     "name"              :"PlentyTheme",
     "description"       :"Plentymarkets Theme",
-    "namespace"         :"Theme",
+    "namespace"         :"PlentyTheme",
     "author"            :"Marc Lubitsch",
     "type"              :"template",
-    "serviceProvider"   :"Theme\\Providers\\ThemeServiceProvider"
+    "serviceProvider"   :"PlentyTheme\\Providers\\ThemeServiceProvider"
     "dataProviders"     :
     [
         {
-            "key"           :"Theme\\Containers\\ThemeContainer",
+            "key"           :"PlentyTheme\\Containers\\ThemeContainer",
             "name"          :"beGLOSS",
             "description"   :""
         }
