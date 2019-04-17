@@ -4,7 +4,7 @@
     "namespace"         :"PlentyTheme",
     "author"            :"Marc Lubitsch",
     "type"              :"template",
-    "serviceProvider"   :"PlentyTheme\\Providers\\ThemeServiceProvider"
+    "serviceProvider"   :"PlentyTheme\\Providers\\ThemeServiceProvider",
     "dataProviders"     :
     [
         {
