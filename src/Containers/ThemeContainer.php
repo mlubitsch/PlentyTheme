@@ -1,6 +1,6 @@
 <?php
      
-namespace Theme\Containers;
+namespace PlentyTheme\Containers;
  
 use Plenty\Plugin\Templates\Twig;
  
