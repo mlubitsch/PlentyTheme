@@ -8,7 +8,7 @@
     "dataProviders"     :
     [
         {
-            "key"           :"Theme\\Containers\\ThemeContainer",
+            "key"           :"PlentyTheme\\Containers\\ThemeContainer",
             "name"          :"beGLOSS",
             "description"   :""
         }
