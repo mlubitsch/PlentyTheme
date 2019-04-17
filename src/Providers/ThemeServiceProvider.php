@@ -1,6 +1,6 @@
 <?php
  
-namespace PlentyTheme\Providers;
+namespace Theme\Providers;
  
  
 use Plenty\Plugin\ServiceProvider;
