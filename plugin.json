@@ -1,16 +1,36 @@
 {
-    "name"              :"PlentyTheme",
-    "description"       :"Plentymarkets Theme",
-    "namespace"         :"PlentyTheme",
-    "author"            :"Marc Lubitsch",
-    "type"              :"template",
-    "serviceProvider"   :"PlentyTheme\\Providers\\ThemeServiceProvider",
+    "version"           :   "0.0.1",
+    "license"           :   "AGPL-3.0",
+    "name"              :   "PlentyTheme",
+    "namespace"         :   "CeresVanilla",
+    "author"            :   "plentymarkets GmbH",
+    "keywords"          :   ["plentymarkets", "plugins", "layout", "theme", "ceres"],
+    "price"             :   0,
+    "categories"        :   [3518],
+    "type"              :   "theme",
+    "require"           :   ["Ceres"],
+    "serviceProvider"   :   "CeresVanilla\\Providers\\CeresVanillaServiceProvider",
     "dataProviders"     :
     [
         {
-            "key"           :"PlentyTheme\\Containers\\ThemeContainer",
-            "name"          :"beGLOSS",
-            "description"   :""
+            "key"           :"CeresVanilla\\Containers\\CeresVanillaContainer",
+            "name"          :"Stylesheet",
+            "description"   :"Add changes to the CSS file"
+        },
+        {
+            "key"           :"CeresVanilla\\Containers\\CeresVanillaItemListContainer1",
+            "name"          :"First item list",
+            "description"   :"Display a configurable list of items in your online store"
+        },
+        {
+            "key"           :"CeresVanilla\\Containers\\CeresVanillaItemListContainer2",
+            "name"          :"Second item list",
+            "description"   :"Display a configurable list of items in your online store"
+        },
+        {
+            "key"           :"CeresVanilla\\Containers\\CeresVanillaItemListContainer3",
+            "name"          :"Third item list",
+            "description"   :"Display a configurable list of items in your online store"
         }
     ]
 }
