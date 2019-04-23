@@ -1,1 +1,4 @@
 /* Enter your CSS here */
+.wrapper-main #page-header.top-bar{
+    background-color: red !important;
+}
