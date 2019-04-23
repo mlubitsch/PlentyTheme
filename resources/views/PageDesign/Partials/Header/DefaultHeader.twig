@@ -130,10 +130,9 @@
                 </div>
             </div>
         {% endif %}
-
         <shop-country-settings
                 country-flag-prefix="flag-icon-"
-                shipping-countries="{{ services.country.getActiveCountriesList() | filterFields(['id','currLangName', 'isoCode2', 'states.id', 'states.name'])}}"
+                :shipping-countries="{{ services.country.getActiveCountriesList() | filterFields(['id','currLangName', 'isoCode2', 'states.id', 'states.name']) | json_encode }}"
                 :shipping-country-id="{{ services.checkout.getShippingCountryId }}">
             <div id="countrySettings" class="cmp cmp-country-settings collapse">
                 <div class="container-max">
