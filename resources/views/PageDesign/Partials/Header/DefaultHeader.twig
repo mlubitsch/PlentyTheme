@@ -1,27 +1,26 @@
-{% import "PlentyTheme::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 <header id="page-header" class="top-bar fixed-top">
     <div>
-        test    
         <div class="container-max">
             <div class="row mx-0">
-                {{ LayoutContainer.show("PlentyTheme::Header.LeftSide") }}
+                {{ LayoutContainer.show("Ceres::Header.LeftSide") }}
 
                 <ul id="controlsList" class="controls-list list-inline">
                     <li class="list-inline-item control-user">
                         <user-login-handler>
                             <a data-toggle="modal">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hidden-xs-down">{{ trans("PlentyTheme::Template.login") }}</span>
+                                <span class="hidden-xs-down">{{ trans("Ceres::Template.login") }}</span>
                             </a>
                             <span class="pipe"></span>
                             <a data-toggle="modal">
                                 <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                <span class="hidden-xs-down">{{ trans("PlentyTheme::Template.loginRegister") }}</span>
+                                <span class="hidden-xs-down">{{ trans("Ceres::Template.loginRegister") }}</span>
                             </a>
                         </user-login-handler>
                     </li>
-                    <li class="list-inline-item dropdown control-languages">FF
+                    <li class="list-inline-item dropdown control-languages">
                         <a data-toggle="collapse" href="#countrySettings" aria-expanded="false"
                            aria-controls="countrySettings"
                            data-parent="#controlsList">
@@ -64,37 +63,37 @@
                     {% endif %}
                     <li class="list-inline-item control-basket">
                         <a v-toggle-basket-preview href="#" class="toggle-basket-preview">
-                            {% if config("PlentyTheme.header.basket_values") != "sum" %}
+                            {% if config("Ceres.header.basket_values") != "sum" %}
                                 <span class="badge-right" v-basket-item-quantity="$store.state.basket.data.itemQuantity">0</span>
                             {% endif %}
 
                             <i v-waiting-animation="$store.state.basket.isBasketLoading" waiting-class="fa fa-refresh fa-spin" class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            {% if config("PlentyTheme.header.basket_values") != "quantity" %}
+                            {% if config("Ceres.header.basket_values") != "quantity" %}
                                 <span class="badge" v-if="!$store.state.basket.showNetPrices" v-basket-item-sum="$store.state.basket.data.itemSum">0,00 {{ services.checkout.getCurrencyData()[currencyFormat] }}</span>
                                 <span class="badge" v-else v-cloak v-basket-item-sum="$store.state.basket.data.itemSumNet">0,00 {{ services.checkout.getCurrencyData()[currencyFormat] }}</span>
                             {% endif %}
                         </a>
 
-                        {% if config("PlentyTheme.basket.preview_type") != "right" %}
+                        {% if config("Ceres.basket.preview_type") != "right" %}
                             <basket-preview template="#vue-basket-preview-hover" :show-net-prices="{{ showNetPrices | json_encode }}"></basket-preview>
                         {% endif %}
                     </li>
                 </ul>
             </div>
         </div>
-        {% include "PlentyTheme::PageDesign.Partials.Header.Navigation" %}
+        {% include "Ceres::PageDesign.Partials.Header.Navigation" %}
     </div>
 </header>
 
 <!-- breadcrumb -->
 {% if not services.template.isHome() and not services.template.isMyAccount() and not services.template.isCheckout() %}
-    {% include "PlentyTheme::PageDesign.Partials.Header.Breadcrumb" %}
+    {% include "Ceres::PageDesign.Partials.Header.Breadcrumb" %}
 {% endif %}
 
 <div class="container-max page-header">
     <div class="row mx-0">
         <div id="searchBox" class="cmp cmp-search-box collapse">
-            {% set overrideSearchBar = LayoutContainer.show("PlentyTheme::Search.SearchBar") %}
+            {% set overrideSearchBar = LayoutContainer.show("Ceres::Search.SearchBar") %}
             {% if overrideSearchBar | trim is empty %}
                 <item-search template="#vue-item-search"></item-search>
             {% else %}
@@ -109,7 +108,7 @@
 
                         <div class="currency-list col-12">
                             <div class="list-title">
-                                <strong>{{ trans("PlentyTheme::Template.headerCurrency") }}</strong>
+                                <strong>{{ trans("Ceres::Template.headerCurrency") }}</strong>
                                 <hr>
                             </div>
                             <ul class="text-center text-sm-left">
@@ -130,9 +129,10 @@
                 </div>
             </div>
         {% endif %}
+
         <shop-country-settings
                 country-flag-prefix="flag-icon-"
-                :shipping-countries="{{ services.country.getActiveCountriesList() | filterFields(['id','currLangName', 'isoCode2', 'states.id', 'states.name']) | json_encode }}"
+                shipping-countries="{{ services.country.getActiveCountriesList() | filterFields(['id','currLangName', 'isoCode2', 'states.id', 'states.name']) | json_data("activeCountriesList") }}"
                 :shipping-country-id="{{ services.checkout.getShippingCountryId }}">
             <div id="countrySettings" class="cmp cmp-country-settings collapse">
                 <div class="container-max">
@@ -141,7 +141,7 @@
 
                             <div class="language-settings">
                                 <div class="list-title">
-                                    <strong>{{ trans("PlentyTheme::Template.headerSelectLanguage") }}</strong>
+                                    <strong>{{ trans("Ceres::Template.headerSelectLanguage") }}</strong>
                                     <hr>
                                 </div>
 
@@ -152,7 +152,7 @@
                                         <li{% if lang == language %} class="active"{% endif %}>
                                             <a href="{% if languageUrls[language] is defined %}{{ languageUrls[language] ~ queryString() }}{% elseif language != defaultLanguage %}/{{ language }}{{ urls.trailingSlashSuffix }}{% else %}/{% endif %}" data-update-url>
                                                 <i class="flag-icon flag-icon-{{ language }}"></i>
-                                                {{ trans("PlentyTheme::Template.header" ~ language | capitalize) }}
+                                                {{ trans("Ceres::Template.header" ~ language | capitalize) }}
                                             </a>
                                         </li>
                                     {% endfor %}
@@ -162,7 +162,7 @@
                         <div class="col-12 col-lg-6">
                             <div class="shipping-settings">
                                 <div class="list-title">
-                                    <strong>{{ trans("PlentyTheme::Template.headerSelectShippingCountry") }}</strong>
+                                    <strong>{{ trans("Ceres::Template.headerSelectShippingCountry") }}</strong>
                                     <hr>
                                 </div>
                                 <shipping-country-select :disable-input="{{ services.template.isCheckout() | json_encode() }}"></shipping-country-select>
