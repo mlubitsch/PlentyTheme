@@ -1,4 +1,6 @@
-/* Enter your CSS here */
-.wrapper-main #page-header.top-bar{
+body {
+    background-color: #808080;
+}
+.wrapper-main header .container-max > .row{
     background-color: red !important;
 }
