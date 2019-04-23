@@ -50,5 +50,9 @@
     {% else %}
         {% set initialCategory = category %}
     {% endif %}
-    {% include "Ceres::content.ThemeHeaderNavigation" %}
+    <mobile-navigation
+            navigation-tree-data="{{ categories}}"
+            :initial-category="{{ initialCategory | json_encode }}"
+            template="#vue-mobile-navigation">
+    </mobile-navigation>
 </div>
