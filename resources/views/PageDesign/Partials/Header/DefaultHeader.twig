@@ -1,9 +1,17 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+{% set companyLogo  = config("Ceres.header.company_logo") %}
 
 <header id="page-header" class="top-bar fixed-top">
     <div>
         <div class="container-max">
             <div class="row mx-0">
+                <a class="navbar-brand" href="{{ homepageURL }}">
+                    {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
+                        <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" />
+                    {% else %}
+                        <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" />
+                    {% endif %}
+                </a>
                 {{ LayoutContainer.show("Ceres::Header.LeftSide") }}
 
                 <ul id="controlsList" class="controls-list list-inline">
