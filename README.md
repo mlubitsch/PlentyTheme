@@ -2,9 +2,9 @@
 
 ![plentymarkets Logo](http://www.plentymarkets.eu/layout/pm/images/logo/plentymarkets-logo.jpg)
 
-# CeresVanilla
+# CeresCoconut
 
-A Vanilla theme for Ceres.
+A Coconut theme for Ceres 3.
 
 
 ## Requirements
@@ -34,4 +34,3 @@ Visit our forum and find the latest news and updates in our [Changelog](https://
 ## License
 
 This project is licensed under the GNU AFFERO GENERAL PUBLIC LICENSE - see the [LICENSE](/LICENSE) file for details.
-

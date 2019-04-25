@@ -1,14 +1,15 @@
 {
-    "version"           :   "0.0.1",
-    "license"           :   "AGPL-3.0",
+    "version"           :   "1.0.6",
     "name"              :   "PlentyTheme",
+    "pluginIcon"        :   "icon_plugin_xs.png",
+    "authorIcon"        :   "icon_author_xs.png",
+    "description"       :   "",
     "namespace"         :   "PlentyTheme",
-    "author"            :   "plentymarkets GmbH",
-    "keywords"          :   ["plentymarkets", "plugins", "layout", "theme", "ceres"],
-    "price"             :   0,
-    "categories"        :   [3518],
+    "author"            :   "plentysystems AG",
     "type"              :   "theme",
-    "require"           :   ["Ceres"],
+    "require"           :   {
+                                "Ceres":"~3.0"
+                            },
     "serviceProvider"   :   "PlentyTheme\\Providers\\PlentyThemeServiceProvider",
     "dataProviders"     :
     [

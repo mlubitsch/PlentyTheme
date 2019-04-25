@@ -10,6 +10,7 @@ use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\Templates\Twig;
 use IO\Helper\TemplateContainer;
 use IO\Extensions\Functions\Partial;
+use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
 use Plenty\Plugin\ConfigRepository;
 
 
@@ -87,8 +88,8 @@ class PlentyThemeServiceProvider extends ServiceProvider
             }, self::PRIORITY);
         }
 
-        // Override template for item categories
-        if (in_array("category_item", $enabledOverrides) || in_array("all", $enabledOverrides))
+        // Override category view
+        if (in_array("category_view", $enabledOverrides) || in_array("all", $enabledOverrides))
         {
 
             $dispatcher->listen('IO.tpl.category.item', function (TemplateContainer $container)
@@ -115,7 +116,7 @@ class PlentyThemeServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.checkout', function (TemplateContainer $container)
             {
-                $container->setTemplate('PlentyTheme::Checkout.Checkout');
+                $container->setTemplate('PlentyTheme::Checkout.CheckoutView');
                 return false;
             }, self::PRIORITY);
         }
@@ -159,13 +160,13 @@ class PlentyThemeServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.item', function (TemplateContainer $container)
             {
-                $container->setTemplate('PlentyTheme::Item.SingleItem');
+                $container->setTemplate('PlentyTheme::Item.SingleItemWrapper');
                 return false;
             }, self::PRIORITY);
         }
 
-        // Override category view
-        if (in_array("category_view", $enabledOverrides) || in_array("all", $enabledOverrides))
+        // Override search view
+        if (in_array("search", $enabledOverrides) || in_array("all", $enabledOverrides))
         {
 
             $dispatcher->listen('IO.tpl.search', function (TemplateContainer $container)
@@ -181,7 +182,51 @@ class PlentyThemeServiceProvider extends ServiceProvider
 
             $dispatcher->listen('IO.tpl.my-account', function (TemplateContainer $container)
             {
-                $container->setTemplate('PlentyTheme::MyAccount.MyAccount');
+                $container->setTemplate('PlentyTheme::MyAccount.MyAccountView');
+                return false;
+            }, self::PRIORITY);
+        }
+
+        // Override wish list
+        if (in_array("wish_list", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+
+            $dispatcher->listen('IO.tpl.wish-list', function (TemplateContainer $container)
+            {
+                $container->setTemplate('PlentyTheme::WishList.WishListView');
+                return false;
+            }, self::PRIORITY);
+        }
+
+        // Override contact page
+        if (in_array("contact", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+
+            $dispatcher->listen('IO.tpl.contact', function (TemplateContainer $container)
+            {
+                $container->setTemplate('PlentyTheme::Customer.Contact');
+                return false;
+            }, self::PRIORITY);
+        }
+
+        // Override order return view
+        if (in_array("order_return", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+
+            $dispatcher->listen('IO.tpl.order.return', function (TemplateContainer $container)
+            {
+                $container->setTemplate('PlentyTheme::OrderReturn.OrderReturnView');
+                return false;
+            }, self::PRIORITY);
+        }
+
+        // Override order return confirmation
+        if (in_array("order_return_confirmation", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+
+            $dispatcher->listen('IO.tpl.order.return.confirmation', function (TemplateContainer $container)
+            {
+                $container->setTemplate('PlentyTheme::OrderReturn.OrderReturnConfirmation');
                 return false;
             }, self::PRIORITY);
         }
@@ -197,13 +242,24 @@ class PlentyThemeServiceProvider extends ServiceProvider
             }, self::PRIORITY);
         }
 
+        // Override cancellation form
+        if (in_array("cancellation_form", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+
+            $dispatcher->listen('IO.tpl.cancellation-form', function (TemplateContainer $container)
+            {
+                $container->setTemplate('PlentyTheme::StaticPages.CancellationForm');
+                return false;
+            }, self::PRIORITY);
+        }
+
         // Override legal disclosure
         if (in_array("legal_disclosure", $enabledOverrides) || in_array("all", $enabledOverrides))
         {
 
             $dispatcher->listen('IO.tpl.legal-disclosure', function (TemplateContainer $container)
             {
-                $container->setTemplate('PlentyTheme::Static<strong></strong>Pages.LegalDisclosure');
+                $container->setTemplate('PlentyTheme::StaticPages.LegalDisclosure');
                 return false;
             }, self::PRIORITY);
         }
@@ -251,6 +307,63 @@ class PlentyThemeServiceProvider extends ServiceProvider
                 return false;
             }, self::PRIORITY);
         }
+
+        // Override newsletter opt-out page
+        if (in_array("newsletter_opt_out", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+
+            $dispatcher->listen('IO.tpl.newsletter.opt-out', function (TemplateContainer $container)
+            {
+                $container->setTemplate('PlentyTheme::Newsletter.NewsletterOptOut');
+                return false;
+            }, self::PRIORITY);
+        }
+
+        $enabledResultFields = [];
+
+        if(!empty($config->get("PlentyTheme.result_fields.override")))
+        {
+            $enabledResultFields = explode(", ", $config->get("PlentyTheme.result_fields.override"));
+        }
+
+        if(!empty($enabledResultFields))
+        {
+            $dispatcher->listen( 'IO.ResultFields.*', function(ResultFieldTemplate $templateContainer) use ($enabledResultFields)
+            {
+                $templatesToOverride = [];
+                
+                // Override list item result fields
+                if (in_array("list_item", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_LIST_ITEM] = 'PlentyTheme::ResultFields.ListItem';
+                }
+                
+                // Override single item view result fields
+                if (in_array("single_item", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_SINGLE_ITEM] = 'PlentyTheme::ResultFields.SingleItem';
+                }
+                
+                // Override basket item result fields
+                if (in_array("basket_item", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_BASKET_ITEM] = 'PlentyTheme::ResultFields.BasketItem';
+                }
+
+                // Override auto complete list item result fields
+                if (in_array("auto_complete_list_item", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_AUTOCOMPLETE_ITEM_LIST] = 'PlentyTheme::ResultFields.AutoCompleteListItem';
+                }
+                
+                // Override category tree result fields
+                if (in_array("category_tree", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_CATEGORY_TREE] = 'PlentyTheme::ResultFields.CategoryTree';
+                }
+
+                $templateContainer->setTemplates($templatesToOverride);
+            }, self::PRIORITY);
+        }
     }
 }
-
