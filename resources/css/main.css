@@ -1,1 +1,4 @@
 /* Enter your CSS here */
+#page-body .container-max{
+	max-width: 100%;
+}
