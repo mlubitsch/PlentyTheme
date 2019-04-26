@@ -1,4 +1,10 @@
 /* Enter your CSS here */
-#page-body .container-max{
+#page-body .container-max :not(.page-content){
 	max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.widget{
+    margin-bottom: 0.2rem;
 }
