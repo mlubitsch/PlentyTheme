@@ -11,7 +11,8 @@
 .navbar{
     background-color: #2b2b2b;
 }
-.wrapper-main #page-header.top-bar{
+.wrapper-main #page-header.top-bar, 
+.footer .dark{
     background-color: #000000;
 }
 .footer{
