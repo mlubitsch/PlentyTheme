@@ -29,7 +29,7 @@
 .navbar-brand img{
     max-height: 3.5rem;
 }
-#page-header .controls-list > li:first-child a{
+#page-header .controls-list > li a:first-child{
     font-size: 1rem;
     line-height: 50px;
 }
