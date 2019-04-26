@@ -110,7 +110,10 @@
     </div>
     <div class="container-max footer-content dark">
         {% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
-        <div class="copyright text-center my-3">
+        <div class="copyright text-center my-3 col-sm-3">
+        </div>
+        <div class="copyright text-center my-3 col-sm-3">
+            <!--
             <div class="static-link-list">
                 {% autoescape false %}
                     <a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a>
@@ -127,11 +130,20 @@
                     {% endif %}
                 {% endautoescape %}
             </div>
-            <a rel="nofollow" href="https://www.plentymarkets.eu">
-                <img alt="Plentymarkets GmbH Logo" class="svg plenty-brand" src="{{ plugin_path('Ceres') }}/images/plentymarkets-logo.svg" rel="nofollow">
-            </a>
             <br>
+            -->            
             <small>&copy; Copyright {{ "now" | date("Y") }} | {{ trans("Ceres::Template.footerAllRightsReserved") }}</small>
+            <br />
+            <a class="navbar-brand" href="{{ homepageURL }}">
+                {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
+                    <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" />
+                {% else %}
+                    <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" />
+                {% endif %}
+            </a>
+        </div>
+        <div class="copyright text-center my-3 col-sm-3 logo-bottom">
+            <a href="https://www.facebook.com/begloss.shop/" target="_blank"><img src="https://cdn03.plentymarkets.com/ypyl0bpdg0dx/frontend/beGLOSS/facebook.png" /></a>
         </div>
     </div>
 </div>
