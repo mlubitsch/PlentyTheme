@@ -1,5 +1,5 @@
 /* Enter your CSS here */
-#page-body .container-max :not(.page-content){
+#page-body .container-max:not(.page-content){
 	max-width: 100%;
     padding-right: 0;
     padding-left: 0;
