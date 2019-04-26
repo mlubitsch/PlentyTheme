@@ -8,3 +8,13 @@
 .widget{
     margin-bottom: 0.2rem;
 }
+.navbar{
+    background-color: #2b2b2b;
+}
+.wrapper-main #page-header.top-bar{
+    background-color: #000000;
+}
+.footer{
+    color: #8e8e8e;
+    background-color: #2b2b2b;
+}
