@@ -49,4 +49,9 @@
 .footer-social img{
     width: 30px;
 }
-
+#mainNavbarCollapsable ul.mainmenu{
+    color: #bcbdc0;
+}
+#mainNavbarCollapsable ul.mainmenu:hover{
+    color: white;
+}
