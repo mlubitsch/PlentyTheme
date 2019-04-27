@@ -56,11 +56,11 @@
 #mainNavbarCollapsable ul.mainmenu a:hover{
     color: white;
 }
-#mainNavbarCollapsable ul.mainmenu li{
+#mainNavbarCollapsable ul.mainmenu:not(.nav-dropdown-inner) > li{
     flex-grow: 1;
     border-left: 1px solid grey;
 }
-#mainNavbarCollapsable ul.mainmenu li:last-child{
+#mainNavbarCollapsable ul.mainmenu:not(.nav-dropdown-inner) li:last-child{
     border-right: 1px solid grey;
 }
 
