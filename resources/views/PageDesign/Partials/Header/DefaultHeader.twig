@@ -5,7 +5,7 @@
     <div>
         <div class="container-max">
             <div class="row mx-0">
-                <div class="brand-wrapper" {% if showHeaderNavBar == "side" %}style="position: relative"{% endif %}>
+                <div class="brand-wrapper" style="position: relative">
                     <a class="navbar-brand" href="{{ homepageURL }}">
                         {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
                             <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" />
@@ -14,7 +14,6 @@
                         {% endif %}
                     </a>
                 </div>
-                {{ LayoutContainer.show("Ceres::Header.LeftSide") }}
 
                 <ul id="controlsList" class="controls-list list-inline">
                     <li class="list-inline-item control-user">
