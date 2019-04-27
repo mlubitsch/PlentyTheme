@@ -14,7 +14,7 @@
 .wrapper-main #page-header.top-bar{
     background-color: #000000;
 }
-.footer .dark{
+.footer.dark{
     background-color: #1e1e1e;
     color: white;
 }
