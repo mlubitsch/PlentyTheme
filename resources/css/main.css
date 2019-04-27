@@ -33,6 +33,9 @@
 .navbar-brand img{
     max-height: 3.5rem;
 }
+.footer-brand img{
+    max-height: 2em;
+}
 #page-header .controls-list > li a:not(.small){
     font-size: 1rem;
     line-height: 50px;
@@ -43,3 +46,7 @@
     border-right: 1px solid grey;
     */
 }
+.footer-social img{
+    width: 30px;
+}
+
