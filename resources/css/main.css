@@ -63,6 +63,9 @@
 #mainNavbarCollapsable ul.mainmenu:not(.nav-dropdown-inner) li:last-child{
     border-right: 1px solid grey;
 }
+#mainNavbarCollapsable ul.mainmenu li a{
+    padding: 0.5rem;
+}
 
 nav.navbar.megamenu{
     border-top: 1px solid grey;
