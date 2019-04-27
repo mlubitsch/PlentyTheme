@@ -51,12 +51,35 @@
 }
 #mainNavbarCollapsable ul.mainmenu{
     color: #bcbdc0;
+    text-align: left;
 }
 #mainNavbarCollapsable ul.mainmenu:hover{
     color: white;
 }
+#mainNavbarCollapsable ul.mainmenu li{
+    flex-grow: 1;
+    border-left: 1px solid grey;
+}
+#mainNavbarCollapsable ul.mainmenu li:last-child{
+    border-right: 1px solid grey;
+}
+
+.navbar .megamenu{
+    border-top: 1px solid grey;
+}
 
 @media screen and (min-width: 992px) {
+    .brand-wrapper{
+        position: absolute;
+    }
+}
+@media screen and (min-width: 768px) {
+    .brand-wrapper{
+        position: absolute;
+    }
+}
+    
+@media screen and (min-width: 576px) {
     .brand-wrapper{
         position: absolute;
     }
