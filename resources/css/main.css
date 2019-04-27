@@ -53,7 +53,7 @@
     color: #bcbdc0;
     text-align: left;
 }
-#mainNavbarCollapsable ul.mainmenu:hover{
+#mainNavbarCollapsable ul.mainmenu a:hover{
     color: white;
 }
 #mainNavbarCollapsable ul.mainmenu li{
