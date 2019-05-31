@@ -60,7 +60,7 @@
     flex-grow: 1;
     border-left: 1px solid grey;
 }
-#mainNavbarCollapsable ul.mainmenu:not(.nav-dropdown-inner) li:last-child{
+#mainNavbarCollapsable ul.mainmenu:not(.nav-dropdown-inner) > li:last-child{
     border-right: 1px solid grey;
 }
 #mainNavbarCollapsable ul.mainmenu li a{
@@ -70,6 +70,11 @@
 nav.navbar.megamenu{
     border-top: 1px solid grey;
 }
+
+.widget .widget-inner .widget{
+    margin-bottom:1px;
+}
+
 
 @media screen and (min-width: 992px) {
     .brand-wrapper{
