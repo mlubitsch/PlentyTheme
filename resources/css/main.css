@@ -4,7 +4,13 @@
     padding-right: 0;
     padding-left: 0;
 }
-
+.page-content{
+    background-color:white;
+}
+.single-rightside{
+    position: relative;
+    left:0;
+}
 .widget{
     margin-bottom: 0.2rem;
 }
