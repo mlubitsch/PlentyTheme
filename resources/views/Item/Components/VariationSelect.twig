@@ -1,16 +1,34 @@
-<div>
-  <div class="col-xs-12 col-md-6 col-lg-12 variation-button" >
-    <div v-for="(attribute, attributeId) in attributes">
-      <span class="variation-headline">${ attribute.name } wählen</span>
-      <div class="row variation-buttons" >
-        <div v-for="(attributeValue, attributeValueId) in attribute.values" class="variation-button-context">
-          <input type="radio" class="variation-input-button"
-          :id="attributeValueId" :value="attributeValueId" :name="attribute.name"
-          v-model="selectedAttributes[attributeId]" :disabled="!isEnabled(attributeId, attributeValueId)"
-          @change="onSelectionChange(selectedAttributes[attributeId])">
-          <label class="btn btn-primary" :for="attributeValueId">${ attributeValue }</label>
+
+
+
+<script type="x/template" id="vue-variation-select">
+    <div class="row">
+        <div>
+          <div class="col-xs-12 col-md-6 col-lg-12 variation-button" >
+            <div v-for="(attribute, attributeId) in attributes">
+              <span class="variation-headline">${ attribute.name } wählen</span>
+              <div class="row variation-buttons" >
+                <div v-for="(attributeValue, attributeValueId) in attribute.values" class="variation-button-context">
+                  <input type="radio" class="variation-input-button" :id="attributeValueId" :value="attributeValueId" :name="attribute.name" v-model="selectedAttributes[attributeId]" :disabled="!isEnabled(attributeId, attributeValueId)" @change="onSelectionChange(selectedAttributes[attributeId])">
+                  <label class="btn btn-primary" :for="attributeValueId">${ attributeValue }</label>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="col-12 variation-select" v-if="possibleUnitIds.length > 1">
+            <div class="input-unit">
+                <select class="custom-select" v-model="selectedUnitId" @change="onSelectionChange(possibleUnitIds[selectedUnitId])">
+                    <option :value="0" v-if="hasEmptyOption">{{ trans("Ceres::Template.singleItemPleaseSelect") }}</option>
+                    <option
+                            v-for="unitCombinationId in possibleUnitIds"
+                            :value="unitCombinationId">
+                        ${ variationUnits[unitCombinationId] }
+                    </option>
+                </select>
+                <label v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans("Ceres::Template.singleItemContent") }}">{{ trans("Ceres::Template.singleItemContent") }}</label>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</script>
