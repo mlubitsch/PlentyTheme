@@ -8,7 +8,7 @@
     "author"            :   "plentysystems AG",
     "type"              :   "theme",
     "require"           :   {
-                                "Ceres":"~4.0"
+                                "Ceres":"~3.0"
                             },
     "serviceProvider"   :   "PlentyTheme\\Providers\\PlentyThemeServiceProvider",
     "dataProviders"     :
