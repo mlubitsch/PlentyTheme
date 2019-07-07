@@ -25,6 +25,11 @@
     padding: 0 0 8px;
     font-size: 1.3rem;
 }
+.variation-input-button{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
 .footer a{
     color: #8e8e8e;
 }
