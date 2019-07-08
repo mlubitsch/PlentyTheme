@@ -65,7 +65,7 @@
         <div class="row">
             <hr class="my-4">
             {% for i in 1..numberOfCols %}
-                <div class="col-6 col-sm-3 col-xs-12 col-lg-3">
+                <div class="col-6 col-sm-6 col-xs-12 col-lg-3">
                     <nav class="footer-column mb-4">
                         <h2 class="h5">{{ trans('Ceres::Template.footerColumnTitle' ~ i) }}</h2>
                         <ul class="list-unstyled">
@@ -89,6 +89,19 @@
                     </nav>
                 </div>
             {% endfor %}
+            <div class="col-6 col-sm-6 col-xs-12 col-lg-3">
+                <nav class="footer-column mb-4">
+                    <h2 class="h5">Partner</h2>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.haendlerbund.de/mitglied/show.php?uuid=bc4f17c8-c253-11e4-bc3a-14dae9b38da3-8761756940" target="_blank">
+                                <img class="img-responsive" src="https://www.haendlerbund.de/mitglied/logo.php?uuid=bc4f17c8-c253-11e4-bc3a-14dae9b38da3-8761756940&size=120&variant=1" title="Händlerbund Mitglied" alt="Mitglied im Händlerbund" hspace="5" vspace="5" border="0" />
+                            </a>
+                        </li>
+                        <li><img class="img-responsive" src="/layout/callisto/img/shipping_provider/ssl.png" title="SSL" /></li>
+                    </ul>
+                </nav>
+            </div>
             <hr class="d-sm-none my-4">
             <div class="col-6 col-sm-3">
                 <div class="footer-column">
