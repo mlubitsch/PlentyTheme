@@ -108,6 +108,18 @@ nav.navbar.megamenu{
     background-color: black;
     color: white;
 }
+.design_ln_col1{
+    width: 30px;
+    height: 3px;
+    background-color: #dc257d;
+    display: block;
+}
+.design_ln_col2{
+    width: 30px;
+    height: 3px;
+    background-color: #1961ff;
+    display: block;
+}
 
 @media screen and (min-width: 992px) {
     .brand-wrapper{
