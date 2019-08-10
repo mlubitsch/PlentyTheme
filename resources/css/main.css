@@ -98,11 +98,9 @@ nav.navbar.megamenu{
 }
 .overlay{    
     width: 100%;
-    position: absolute;    
-    top:50%;
-    left:50%;
-    z-index:9999;
-    transform:translate(-50%,0);
+    position: relative;    
+    z-index:20;
+    margin-bottom: -30px;    
 }
 .invert{
     background-color: black;
