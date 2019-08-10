@@ -104,11 +104,23 @@ nav.navbar.megamenu{
     z-index:9999;
     transform:translate(-50%,0);
 }
-
+.invert{
+    background-color: black;
+    color: white;
+}
 
 @media screen and (min-width: 992px) {
     .brand-wrapper{
         position: absolute;
+    }
+    h1.home{
+        font-size: 60px;
+    }
+    h2.home{
+        font-size: 40px;
+    }
+    p{
+        font-size: 20px;
     }
 }
 @media screen and (min-width: 768px) {
