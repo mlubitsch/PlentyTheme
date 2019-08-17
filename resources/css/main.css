@@ -96,10 +96,12 @@ nav.navbar.megamenu{
 .widget .widget-inner .widget{
     margin-bottom:1px;
 }
-.overlay{    
-    width: 100%;
-    position: relative;    
-    z-index:20;        
+.overlay{        
+    z-index: 20;
+    position: relative;
+    margin-bottom: -30px;
+    top: 0;
+    margin-top: auto;
 }
 .overlay img{
     width: 100%;
