@@ -24,7 +24,7 @@
     left:0;
 }
 .widget{
-    margin-bottom: 0.2rem;
+    /* margin-bottom: 0.2rem; */
 }
 .navbar{
     background-color: #2b2b2b;
@@ -106,7 +106,7 @@ nav.navbar.megamenu{
 }
 
 .widget .widget-inner .widget{
-    margin-bottom:1px;
+    /* margin-bottom:1px; */
 }
 .overlay-right > div:nth-child(2) > div {        
     z-index: 20;
@@ -122,8 +122,12 @@ nav.navbar.megamenu{
     top: 0;
     margin-top: auto;
 }
-.overlay img{
+.overlay-left img, .overlay-right img{
     width: 100%;
+}
+.overlay-left div.widget-inner, .overlay-right div.widget-inner{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 .invert{
     background-color: black;
