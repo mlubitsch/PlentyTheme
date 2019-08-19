@@ -145,15 +145,13 @@ nav.navbar.megamenu{
     background-color: #1961ff;
     display: block;
 }
-.container-max .brand-wrapper{
+.brand_desktop{
+    position: absolute;
     left: 0;
     
 }
 
 @media screen and (min-width: 992px) {
-    .brand-wrapper{
-        position: absolute;
-    }
     h1.home{
         font-size: 60px;
     }
@@ -165,10 +163,10 @@ nav.navbar.megamenu{
     }
 }
 @media screen and (min-width: 768px) {
-    .brand-wrapper{
+    .brand_mobile{
         position: relative;
     }  
-    .container-max .brand-wrapper{
+    .brand_desktop{
         display: none;
     }
     
