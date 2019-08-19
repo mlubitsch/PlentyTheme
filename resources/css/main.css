@@ -147,9 +147,11 @@ nav.navbar.megamenu{
 }
 .brand_desktop{
     position: absolute;
-    left: 0;
-    
+    left: 0;    
 }
+.brand_mobile{
+    position: relative;
+} 
 
 @media screen and (min-width: 992px) {
     h1.home{
@@ -163,10 +165,11 @@ nav.navbar.megamenu{
     }
 }
 @media screen and (min-width: 768px) {
-    .brand_mobile{
-        position: relative;
-    }  
+     
     .brand_desktop{
+        display: block;
+    }
+    .brand_mobile{
         display: none;
     }
     
