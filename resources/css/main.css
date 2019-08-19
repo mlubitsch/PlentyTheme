@@ -12,6 +12,8 @@
     left: calc(-1 * (100vw - 100%) / 2);
     margin-left: 0 !important;
     margin-right: 0!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
 }
 
 .page-content{
@@ -106,7 +108,14 @@ nav.navbar.megamenu{
 .widget .widget-inner .widget{
     margin-bottom:1px;
 }
-.overlay > div {        
+.overlay-right > div:nth-child(2) > div {        
+    z-index: 20;
+    position: relative;
+    margin-bottom: -30px;
+    top: 0;
+    margin-top: auto;
+}
+.overlay-left > div:nth-child(1) > div {        
     z-index: 20;
     position: relative;
     margin-bottom: -30px;
