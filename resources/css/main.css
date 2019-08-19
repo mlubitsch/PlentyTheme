@@ -145,8 +145,9 @@ nav.navbar.megamenu{
     background-color: #1961ff;
     display: block;
 }
-nav.navbar .brand-wrapper{
-    display: none;
+.container-max .brand-wrapper{
+    left: 0;
+    
 }
 
 @media screen and (min-width: 992px) {
@@ -165,18 +166,13 @@ nav.navbar .brand-wrapper{
 }
 @media screen and (min-width: 768px) {
     .brand-wrapper{
-        position: absolute;
-    }
-    nav.navbar .brand-wrapper{
-        display: block;
-    }
-    #page-header .brand-wrapper{
+        position: relative;
+    }  
+    .container-max .brand-wrapper{
         display: none;
     }
+    
 }
     
 @media screen and (min-width: 576px) {
-    .brand-wrapper{
-        position: absolute;
-    }
 }
