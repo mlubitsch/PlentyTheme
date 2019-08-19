@@ -145,13 +145,6 @@ nav.navbar.megamenu{
     background-color: #1961ff;
     display: block;
 }
-.brand_desktop{
-    position: absolute;
-    left: 0;    
-}
-.brand_mobile{
-    position: relative;
-} 
 
 @media screen and (min-width: 992px) {
     h1.home{
@@ -167,13 +160,24 @@ nav.navbar.megamenu{
 @media screen and (min-width: 768px) {
      
     .brand_desktop{
-        display: block;
+        display: none;
     }
     .brand_mobile{
-        display: none;
+        display: block;
     }
     
 }
     
 @media screen and (min-width: 576px) {
 }
+
+
+.brand_desktop{
+    display: block;
+    position: absolute;
+    left: 0;    
+}
+.brand_mobile{
+    position: relative;
+    display: none;
+} 
