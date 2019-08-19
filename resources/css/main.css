@@ -104,7 +104,7 @@ nav.navbar.megamenu{
 .widget .widget-inner .widget{
     margin-bottom:1px;
 }
-.overlay{        
+.overlay > div {        
     z-index: 20;
     position: relative;
     margin-bottom: -30px;
@@ -114,7 +114,6 @@ nav.navbar.megamenu{
 .overlay img{
     width: 100%;
 }
-
 .invert{
     background-color: black;
     color: white;
