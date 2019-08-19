@@ -118,7 +118,7 @@ nav.navbar.megamenu{
 .overlay-left > div:nth-child(1) > div {        
     z-index: 20;
     position: relative;
-    margin-bottom: -30px;
+    margin-bottom: -50px;
     top: 0;
     margin-top: auto;
 }
