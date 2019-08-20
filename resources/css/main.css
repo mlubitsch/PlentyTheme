@@ -156,6 +156,19 @@ nav.navbar.megamenu{
 .design_btn{
     font-size: 16px;
 }
+.categorie-subnav{
+	overflow: hidden;
+    text-align: center;
+}
+.categorie-subnav div{
+	transition: all 300ms ease 0s;
+    float: left;
+    border: 2px solid black;
+    color: black;
+    padding: 8px;
+    margin: 6px;
+    width: 32%;
+}
 @media screen and (min-width: 992px) {
     h1.home{
         font-size: 60px;
