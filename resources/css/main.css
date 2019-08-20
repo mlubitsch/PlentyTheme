@@ -26,6 +26,10 @@
 .widget{
     /* margin-bottom: 0.2rem; */
 }
+.cmp-country-settings, .cmp-currency-select,
+div:not(.top-bar) > .page-header > div > .cmp-search-box{
+    top: 65px;
+}
 .navbar{
     background-color: #2b2b2b;
 }
