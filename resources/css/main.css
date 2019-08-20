@@ -140,13 +140,13 @@ nav.navbar.megamenu{
     width: 30px;
     height: 3px;
     background-color: #dc257d;
-    display: block;
+    display: inline-block;
 }
 .design_ln_col2{
     width: 30px;
     height: 3px;
     background-color: #1961ff;
-    display: block;
+    display: inline-block;
 }
 .design_btn{
     font-size: 16px;
