@@ -89,6 +89,9 @@ div:not(.top-bar) > .page-header > div > .cmp-search-box{
     width: 30px;
 }
 #mainNavbarCollapsable ul.mainmenu{
+    float: none;
+}
+#mainNavbarCollapsable ul.mainmenu{
     color: #bcbdc0;
     text-align: left;
 }
@@ -153,7 +156,6 @@ nav.navbar.megamenu{
 .design_btn{
     font-size: 16px;
 }
-
 @media screen and (min-width: 992px) {
     h1.home{
         font-size: 60px;
