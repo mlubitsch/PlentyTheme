@@ -64,8 +64,19 @@
         
         <div class="row">
             <hr class="my-4">
+            <div class="col-6 col-sm-6 col-xs-12 col-lg-2">
+                <a class="footer-brand" href="{{ homepageURL }}">
+                    {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
+                        <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" />
+                    {% else %}
+                        <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" />
+                    {% endif %}
+                </a>
+                <br />
+                <small>&copy; Copyright {{ "now" | date("Y") }} | {{ trans("Ceres::Template.footerAllRightsReserved") }}</small>
+            </div>
             {% for i in 1..numberOfCols %}
-                <div class="col-6 col-sm-6 col-xs-12 col-lg-3">
+                <div class="col-6 col-sm-6 col-xs-12 col-lg-2">
                     <nav class="footer-column mb-4">
                         <h2 class="h5">{{ trans('Ceres::Template.footerColumnTitle' ~ i) }}</h2>
                         <ul class="list-unstyled">
@@ -89,7 +100,7 @@
                     </nav>
                 </div>
             {% endfor %}
-            <div class="col-6 col-sm-6 col-xs-12 col-lg-3">
+            <div class="col-6 col-sm-6 col-xs-12 col-lg-2">
                 <nav class="footer-column mb-4">
                     <h2 class="h5">Partner</h2>
                     <ul class="list-unstyled">
