@@ -160,15 +160,7 @@ nav.navbar.megamenu{
 	overflow: hidden;
     text-align: center;
 }
-.categorie-subnav div{
-	transition: all 300ms ease 0s;
-    float: left;
-    border: 2px solid black;
-    color: black;
-    padding: 8px;
-    margin: 6px;
-    width: 32%;
-}
+
 @media screen and (min-width: 992px) {
     h1.home{
         font-size: 60px;
@@ -190,13 +182,27 @@ nav.navbar.megamenu{
 @media screen and (min-width: 768px) {
     .home-margin-box{
         margin-top: 6rem !important;
+    }
+    .categorie-subnav div {
+        width: 44% !important;
     }    
 }
     
 @media screen and (min-width: 576px) {
+    .categorie-subnav div {
+        width: 91% !important;
+    }    
 }
 
-
+.categorie-subnav div{
+	transition: all 300ms ease 0s;
+    float: left;
+    border: 2px solid black;
+    color: black;
+    padding: 8px;
+    margin: 6px;
+    width: 32%;
+}
 .brand_desktop{
     display: none;
     position: absolute;
