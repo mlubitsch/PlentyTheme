@@ -33,43 +33,13 @@
     {% endif %}
 
 
-    <div class="container-max footer-content">
-        <div class="row">
-            <div class="col-12">
-                <div class="footer-services mt-4">
-                    {% set paymentMethodContent = LayoutContainer.show("Ceres::Homepage.PaymentMethods") %}
-                    {% if paymentMethodContent|trim is not empty %}
-                        <div class="services-payment mb-3">
-                            <strong class="services-title">{{ trans("Ceres::Template.footerPaymentMethods") }}</strong>
-                            {{ paymentMethodContent }}
-                        </div>
-                    {% endif %}
-                    {% set shippingContent = LayoutContainer.show("Ceres::Homepage.Shipping") %}
-                    {% if shippingContent|trim is not empty %}
-                        <div class="services-shipping mb-3">
-                            <strong class="services-title">{{ trans("Ceres::Template.footerOrderShippedBy") }}</strong>
-                            {{ shippingContent }}
-                        </div>
-                    {% endif %}
-                    {% set certifiedContent = LayoutContainer.show("Ceres::Homepage.Certified") %}
-                    {% if certifiedContent|trim is not empty %}
-                        <div class="services-certificate mb-3">
-                            <strong class="services-title">{{ trans("Ceres::Template.footerCertifiedBy") }}</strong>
-                            {{ certifiedContent }}
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
+    <div class="container-max footer-content">        
         
-        <div class="row">
-            <hr class="my-4">
-            <div class="col-6 col-sm-6 col-xs-12 col-lg-2">
+        <div class="row">            
+            <div class="col-6 col-sm-6 col-xs-12 col-lg-3">
                 <a class="footer-brand" href="{{ homepageURL }}">
                     {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
-                        <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" />
-                    {% else %}
-                        <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" />
+                        <img alt="{{ companyName }}" src="https://cdn03.plentymarkets.com/ypyl0bpdg0dx/frontend/beGLOSS/logo_begloss_small.jpg" class="img-fluid" />                    
                     {% endif %}
                 </a>
                 <br />
@@ -100,78 +70,33 @@
                     </nav>
                 </div>
             {% endfor %}
-            <div class="col-6 col-sm-6 col-xs-12 col-lg-2">
+            <div class="col-6 col-sm-6 col-xs-12 col-lg-3">
                 <nav class="footer-column mb-4">
-                    <h2 class="h5">Partner</h2>
+                    <h2 class="h5">beGLOSS Special</h2>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="https://www.haendlerbund.de/mitglied/show.php?uuid=bc4f17c8-c253-11e4-bc3a-14dae9b38da3-8761756940" target="_blank">
-                                <img class="img-responsive" src="https://www.haendlerbund.de/mitglied/logo.php?uuid=bc4f17c8-c253-11e4-bc3a-14dae9b38da3-8761756940&size=120&variant=1" title="Händlerbund Mitglied" alt="Mitglied im Händlerbund" hspace="5" vspace="5" border="0" />
-                            </a>
+                            <a href="">Instagram</a>
                         </li>
-                        <li><img class="img-responsive" src="/layout/callisto/img/shipping_provider/ssl.png" title="SSL" /></li>
+                        <li>
+                            <a href="">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="">Youtube</a>
+                        </li>
                     </ul>
                 </nav>
-            </div>
-            <hr class="d-sm-none my-4">
-            <div class="col-6 col-sm-3">
-                <div class="footer-column">
-                    {{ LayoutContainer.show("Ceres::Footer.RowOne") }}
-                </div>
-            </div>
-            <div class="col-12 col-sm-3">
-                <div class="footer-column row">
-                    {% set rowTwo = LayoutContainer.show("Ceres::Footer.RowTwo") %}
-                    
-                    {{ rowTwo }}
-
-                    <div class="col-12{% if rowTwo|trim is not empty %} col-sm-6 col-lg-12{% endif %}">
-                        {{ LayoutContainer.show("Ceres::Footer.RowThree") }}
-                    </div>
-                </div>
-            </div>
+            </div>            
         </div>            
     </div>    
 </div>
 <div class="footer dark">
     <div class="container-max footer-content">
-        {% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
         <div class="row">
-        <div class="copyright text-center my-3 col-6 col-sm-4 col-lg-4">
-        </div>
-        <div class="copyright text-center my-3 col-6 col-sm-4 col-lg-4">
-            <!--
-            <div class="static-link-list">
-                {% autoescape false %}
-                    <a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a>
-                    {% if config("Ceres.footer.cancellation_use_pdf") == "true" %}
-                        <a href="{{ config('Ceres.footer.cancellation_pdf_path') }}" target="_blank">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
-                    {% else %}
-                        <a href="{{ urls.cancellationForm }}">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
-                    {% endif %}
-                    <a href="{{ urls.legalDisclosure }}">{{ trans("Ceres::Template.footerLegalDisclosure") }}</a>
-                    <a href="{{ urls.privacyPolicy }}">{{ trans("Ceres::Template.footerPrivacyPolicy", {"hyphen": "&shy;"}) }}</a>
-                    <a href="{{ urls.gtc }}">{{ trans("Ceres::Template.footerGtc") }}</a>
-                    {% if config("Ceres.contact.shop_mail") | length > 0 and config("Ceres.contact.shop_mail") != "your@email.com" %}
-                        <a href="{{ urls.contact }}">{{ trans("Ceres::Template.footerContact") }}</a>
-                    {% endif %}
-                {% endautoescape %}
+            <div class="col-12">
+                <div class="footer-services mt-4">
+                    <img src="" />
+                </div>
             </div>
-            <br>
-            -->            
-            <small>&copy; Copyright {{ "now" | date("Y") }} | {{ trans("Ceres::Template.footerAllRightsReserved") }}</small>
-            <br />
-            <a class="footer-brand" href="{{ homepageURL }}">
-                {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
-                    <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" />
-                {% else %}
-                    <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" />
-                {% endif %}
-            </a>
-        </div>
-        <div class="copyright text-center my-3 col-6 col-sm-4 col-lg-4">
-            <a class="footer-social" href="https://www.facebook.com/begloss.shop/" target="_blank"><img alt="Facebook" src="https://cdn03.plentymarkets.com/ypyl0bpdg0dx/frontend/beGLOSS/facebook.png" /></a>
-        </div>
         </div>
     </div>
 </div>
