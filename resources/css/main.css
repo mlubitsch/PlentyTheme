@@ -10,8 +10,7 @@
     width: 100vw;
     position: relative;
     left: calc(-1 * (100vw - 100%) / 2);
-    margin-left: 0 !important;
-    margin-right: 0!important;
+    margin: 0 !important;    
     padding-left: 0!important;
     padding-right: 0!important;
 }
