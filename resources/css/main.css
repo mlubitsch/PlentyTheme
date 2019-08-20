@@ -151,6 +151,7 @@ nav.navbar.megamenu{
 .design_btn{
     font-size: 16px;
 }
+
 @media screen and (min-width: 992px) {
     h1.home{
         font-size: 60px;
@@ -167,11 +168,12 @@ nav.navbar.megamenu{
     .brand_mobile{
         display: none !important;
     }
-
+    
 }
 @media screen and (min-width: 768px) {
-     
-    
+    .home-margin-box{
+        margin-top: 6rem;
+    }    
 }
     
 @media screen and (min-width: 576px) {
@@ -187,3 +189,6 @@ nav.navbar.megamenu{
     position: relative;
     display: block;
 } 
+.home-margin-box{
+    margin-top: 0;
+}
