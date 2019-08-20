@@ -172,7 +172,7 @@ nav.navbar.megamenu{
 }
 @media screen and (min-width: 768px) {
     .home-margin-box{
-        margin-top: 6rem;
+        margin-top: 6rem !important;
     }    
 }
     
