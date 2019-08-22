@@ -15,6 +15,9 @@
     padding-left: 0!important;
     padding-right: 0!important;
 }
+#plenty-cookie-bar .container-max{
+    max-width: 100%;
+}
 
 .page-content{
     background-color:white;
