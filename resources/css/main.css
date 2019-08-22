@@ -174,7 +174,7 @@ nav.navbar.megamenu{
     width: 91%;
 }
 .owl-nav .container-max{
-    max-width: none;
+    max-width: 100% !important;
 }
 
 @media screen and (min-width: 992px) {
