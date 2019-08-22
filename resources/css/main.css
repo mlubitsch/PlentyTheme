@@ -6,7 +6,8 @@
     padding-left: 0;
 }
 */
-.widget-full-width {
+.widget-full-width,
+.widget-cfour-slider {
     width: 100vw;
     position: relative;
     left: calc(-1 * (100vw - 100%) / 2);
@@ -169,6 +170,10 @@ nav.navbar.megamenu{
     margin: 6px;
     width: 91%;
 }
+.owl-nav .container-max{
+    max-width: none;
+}
+
 @media screen and (min-width: 992px) {
     h1.home{
         font-size: 60px;
