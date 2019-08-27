@@ -174,7 +174,10 @@ nav.navbar.megamenu{
     margin: 6px;
     width: 91%;
 }
-.owl-nav .container-max{
+.owl-carousel{
+    margin: 0 !important;
+}
+.owl-nav.container-max{
     max-width: 100% !important;
 }
 
