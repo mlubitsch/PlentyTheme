@@ -177,6 +177,11 @@ nav.navbar.megamenu{
 .owl-carousel{
     margin: 0 !important;
 }
+.owl-height {
+    min-height: 500px; 
+    height:auto !important; 
+    height: 500px; 
+}
 .owl-nav.container-max{
     max-width: 100% !important;
 }
