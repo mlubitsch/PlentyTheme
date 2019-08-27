@@ -56,13 +56,14 @@ div:not(.top-bar) > .page-header > div > .cmp-search-box{
     color: white;
 }
 .footer.dark{
+    border-top: 1px solid #373737;
     background-color: #1e1e1e;
     color: white;    
 }
 .footer{
-    border-top: 1px solid #dc257d;
-    background-color: #2b2b2b;
-    color: #595959;
+    /* border-top: 1px solid #dc257d; */
+    background-color: black;
+    color: #acacac;
         
 }
 #page-body{
