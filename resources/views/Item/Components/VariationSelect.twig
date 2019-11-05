@@ -24,7 +24,7 @@
 
                 <!-- box and image -->
                 <div v-else-if="attribute.type === 'box' || attribute.type === 'image'">
-                    <span class="text-muted">${ attribute.name }:</span> <b>${ getSelectedAttributeValueName(attribute) }</b>
+                    <!-- <span class="text-muted">${ attribute.name }:</span> <b>${ getSelectedAttributeValueName(attribute) }</b> -->
                     <div class="v-s-boxes py-3" :class="{ 'images': attribute.type === 'image' }">
                         <div class="v-s-box bg-white empty-option"
                             v-if="hasEmptyOption"
@@ -47,7 +47,7 @@
             </div>
 
             <!-- units -->
-            <div class="col-12 variation-select" v-if="Object.keys(units).length > 1">
+            <div class="col-12 variation-select hidden" v-if="Object.keys(units).length > 1">
                 <div class="input-unit">
                     <select class="custom-select" @change="selectUnit($event.target.value)">
                         <option
