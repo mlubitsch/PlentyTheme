@@ -1,6 +1,6 @@
 <!-- ITEM DESCRIPTION -->
 <div class="my-5">
-    Beschreibungstest:<br />
+    <!--
     <ul class="nav nav-tabs" role="tablist">
         {% if 'item.description' in itemData or 'all' in itemData %}
             <li class="nav-item" v-if="isDescriptionTabActive">
@@ -20,8 +20,8 @@
 
         <slot name="add-detail-tabs"></slot>
     </ul>
-
-    <div class="tab-content overflow-hidden">
+    -->
+    <!-- <div class="tab-content overflow-hidden"> -->
         {% if 'item.description' in itemData or 'all' in itemData %}
             <div class="tab-pane active overflow-auto" :id="'details-' + currentVariation.variation.id" role="tabpanel" v-if="isDescriptionTabActive">
                 <div class="my-4" v-html="currentVariation.texts.description">
@@ -133,6 +133,6 @@
         </div>
 
         <slot name="add-detail-tabs-content"></slot>
-    </div>
+    <!-- </div> -->
 </div>
 <!-- ./ITEM DESCRIPTION -->
