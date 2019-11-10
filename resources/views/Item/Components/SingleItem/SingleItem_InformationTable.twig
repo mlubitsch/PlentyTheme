@@ -26,7 +26,8 @@
 
 {%  for variationProperty in item.documents[0].data.variationProperties %}
     {% if variationProperty.property.id == 2 %}   
-        <p v-html="variationProperty.values.value"></p>
+        <slot name="2_Imagebox"></slot>
+        <slot name="2"></slot>
         <div>${ variationProperty.values.value }</div>
    	{% endif %}
     {% if variationProperty.property.id == 3 %}    
