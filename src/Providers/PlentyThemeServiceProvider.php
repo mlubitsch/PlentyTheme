@@ -12,7 +12,7 @@ use IO\Helper\TemplateContainer;
 use IO\Extensions\Functions\Partial;
 use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
 use Plenty\Plugin\ConfigRepository;
-
+use PlentyTheme\Contexts\ThemeNameSingleItemContext;
 
 /**
  * Class PlentyThemeServiceProvider
@@ -31,6 +31,14 @@ class PlentyThemeServiceProvider extends ServiceProvider
     {
 
         $enabledOverrides = explode(", ", $config->get("PlentyTheme.templates.override"));
+
+
+        $dispatcher->listen('IO.ctx.item', function (TemplateContainer $templateContainer, $templateData = [])
+        {
+            $templateContainer->setContext( ThemeNameSingleItemContext::class);
+            return false;
+        }, 0);
+
 
         // Override partials
         $dispatcher->listen('IO.init.templates', function (Partial $partial) use ($enabledOverrides)
