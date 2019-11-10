@@ -15,21 +15,15 @@
 <hr>
 
 {%  for variationProperty in item.documents[0].data.variationProperties %}
-	{% if variationProperty.property.id == 2 %}
-		<div class="A-plus" style="height:50px; width: 100px;">
-	    {%  for variationProperty in item.documents[0].data.variationProperties %}
+    {% if variationProperty.property.id == 2 %}    
+        <div>{{ variationProperty.names.name }}: {{ variationProperty.values.value }}</div>
+   	{% endif %}
+    {% if variationProperty.property.id == 3 %}    
+        <div>{{ variationProperty.names.name }}: {{ variationProperty.values.value }}</div>
+   	{% endif %}
 
-			{% if variationProperty.property.id == 2 %}
-				<a href="{{ variationProperty.values.value }}" target="_blank">
-        		<img src="A-plus.png" style="position: relative;">
-				</a>
-			{% endif %}<br/>
-		{% endfor %}
-		</div>
-	{% endif %}
 {% endfor %}
 
- texttest: {{ themeItem.free2 }}
  
 <div class="mb-5">
     <span class="articlenumber small text-muted">
