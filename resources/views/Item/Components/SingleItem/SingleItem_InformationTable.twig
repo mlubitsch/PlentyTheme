@@ -26,7 +26,7 @@
 
 {%  for variationProperty in item.documents[0].data.variationProperties %}
     {% if variationProperty.property.id == 2 %}   
-        {{ trans("variationProperty.values.value") }}
+        <p v-html="variationProperty.values.value"></p>
         <div>{{ variationProperty.property.names.name }}: {{ variationProperty.values.value }}</div>
    	{% endif %}
     {% if variationProperty.property.id == 3 %}    
