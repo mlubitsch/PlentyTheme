@@ -14,17 +14,6 @@
 
 <hr>
 
-{%  for variationProperty in item.documents[0].data.variationProperties %}
-    {% if variationProperty.property.id == 2 %}    
-        <div>{{ variationProperty.names.name }}: {{ variationProperty.values.value }}</div>
-   	{% endif %}
-    {% if variationProperty.property.id == 3 %}    
-        <div>{{ variationProperty.names.name }}: {{ variationProperty.values.value }}</div>
-   	{% endif %}
-
-{% endfor %}
-
- 
 <div class="mb-5">
     <span class="articlenumber small text-muted">
         <b>{{ trans("Ceres::Template.singleItemNumber") }} </b>

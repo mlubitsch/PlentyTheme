@@ -22,6 +22,22 @@
     </ul>
     -->
     <!-- <div class="tab-content overflow-hidden"> -->
+
+
+{%  for variationProperty in item.documents[0].data.variationProperties %}
+    {% if variationProperty.property.id == 2 %}   
+        {{ trans("variationProperty.values.value") }}
+        <div>{{ variationProperty.property.names.name }}: {{ variationProperty.values.value }}</div>
+   	{% endif %}
+    {% if variationProperty.property.id == 3 %}    
+        <div>{{ variationProperty.property.names.name }}: {{ variationProperty.values.value }}</div>
+   	{% endif %}
+
+{% endfor %}
+
+    
+    
+    
         {% if 'item.description' in itemData or 'all' in itemData %}
             <div class="tab-pane active overflow-auto" :id="'details-' + currentVariation.variation.id" role="tabpanel" v-if="isDescriptionTabActive">
                 <div class="my-4" v-html="currentVariation.texts.description">
