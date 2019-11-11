@@ -33,7 +33,7 @@
     {%  for variationProperty in item.documents[0].data.variationProperties %}
     	 {% if variationProperty.property.id == 2 %}
             <div><hr /></div>                    
-    	    <div>${ variationProperty.values.value }</div>
+    	    {{ variationProperty.values.value }}
             <div><hr /></div>
     	{% endif %}
     {% endfor %}
