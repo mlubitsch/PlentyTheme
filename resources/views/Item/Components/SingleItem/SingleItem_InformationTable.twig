@@ -24,6 +24,15 @@
     <!-- <div class="tab-content overflow-hidden"> -->
 
 
+<p v-if="itemData.documents[0].data.variationProperties[0]">
+	<span v-for="(variationProperty, index) in itemData.documents[0].data.variationProperties">
+	  ${ variationProperty.property.names.name }
+	  <template v-if="index < itemData.documents[0].data.variationProperties.length - 1">
+	  <br>
+	  </template>
+	</span>
+  </p>
+
 <slot name="test"></slot>
     
     
