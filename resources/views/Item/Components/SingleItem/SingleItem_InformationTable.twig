@@ -24,18 +24,7 @@
     <!-- <div class="tab-content overflow-hidden"> -->
 
 
-{%  for variationProperty in item.documents[0].data.variationProperties %}
-    {% if variationProperty.property.id == 2 %}   
-        <slot name="2_Imagebox"></slot>
-        <slot name="2"></slot>
-        
-   	{% endif %}
-    {% if variationProperty.property.id == 3 %}    
-        <div>{{ variationProperty.property.names.name }}: {{ variationProperty.values.value }}</div>
-   	{% endif %}
-
-{% endfor %}
-
+<slot name="test"></slot>
     
     
     
