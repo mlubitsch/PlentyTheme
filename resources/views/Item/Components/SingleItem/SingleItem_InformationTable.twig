@@ -26,7 +26,7 @@
 
 <p v-if="itemData.documents[0].data.variationProperties[0]">
 	<span v-for="(variationProperty, index) in itemData.documents[0].data.variationProperties">
-	  ${ variationProperty.property.names.name }
+	  ${ variationProperty.values.value }
 	  <template v-if="index < itemData.documents[0].data.variationProperties.length - 1">
 	  <br>
 	  </template>
