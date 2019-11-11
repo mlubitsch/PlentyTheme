@@ -29,6 +29,7 @@
         {% endif %}
     </template>
     <template #test>
+    <div>test1</div>
     {%  for variationProperty in item.documents[0].data.variationProperties %}
     	 {% if variationProperty.property.id == 2 %}                    
     	    {{ variationProperty.values.value }}
