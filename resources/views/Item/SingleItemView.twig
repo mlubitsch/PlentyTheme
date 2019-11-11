@@ -31,8 +31,10 @@
     <template #test>
     <div>test1</div>
     {%  for variationProperty in item.documents[0].data.variationProperties %}
-    	 {% if variationProperty.property.id == 2 %}                    
-    	    {{ variationProperty.values.value }}
+    	 {% if variationProperty.property.id == 2 %}
+            <div><hr /></div>                    
+    	    <div>{{ variationProperty.values.value }}</div>
+            <div><hr /></div>
     	{% endif %}
     {% endfor %}
     </template>
