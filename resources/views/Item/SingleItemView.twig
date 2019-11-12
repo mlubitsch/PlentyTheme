@@ -32,9 +32,8 @@
     <div>test1</div>
     {%  for variationProperty in item.documents[0].data.variationProperties %}
     	 {% if variationProperty.property.id == 2 %}
-            <div><hr /></div>
-            <div class="m-y-2" v-html="variationProperty.values.value"></div>                    
-    	    {{ variationProperty.values.value }}            
+            <div><hr /></div>                                
+    	    {{ variationProperty.values.value|raw }}            
             <div><hr /></div>
     	{% endif %}
     {% endfor %}
