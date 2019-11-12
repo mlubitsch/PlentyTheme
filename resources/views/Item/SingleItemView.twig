@@ -30,7 +30,7 @@
     </template>
     
         {%  for variationProperty in item.documents[0].data.variationProperties %}
-            <template #itemViewbox_ {{ variationProperty.property.id }}>            	             
+            <template #itemViewbox_{{ variationProperty.property.id }}>            	             
                 {{ variationProperty.values.value|raw }}
             </template>                                                 	                    
         {% endfor %}    
