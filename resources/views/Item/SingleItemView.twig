@@ -28,14 +28,10 @@
             {{ ImageCarouselOverride }}
         {% endif %}
     </template>
-    <template #test>
-    <div>test1</div>
-    {%  for variationProperty in item.documents[0].data.variationProperties %}
-    	 {% if variationProperty.property.id == 2 %}
-            <div><hr /></div>                                
-    	    {{ variationProperty.values.value|raw }}            
-            <div><hr /></div>
-    	{% endif %}
-    {% endfor %}
-    </template>
+    
+        {%  for variationProperty in item.documents[0].data.variationProperties %}
+            <template #itemViewbox_ {{ variationProperty.property.id }}>            	             
+                {{ variationProperty.values.value|raw }}
+            </template>                                                 	                    
+        {% endfor %}    
 </single-item>

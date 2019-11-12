@@ -1,6 +1,13 @@
 <!-- ITEM DESCRIPTION -->
-<div class="my-5">
+
+<div class="widget widget-grid row invert widget-full-width">
+    <slot name="itemViewbox_2"></slot>
+</div>
+
+
+
     <!--
+    <div class="my-5">
     <ul class="nav nav-tabs" role="tablist">
         {% if 'item.description' in itemData or 'all' in itemData %}
             <li class="nav-item" v-if="isDescriptionTabActive">
@@ -34,9 +41,9 @@
   </p>
 -->
 
-<slot name="test"></slot>
+
     
-    
+<!--    
     
         {% if 'item.description' in itemData or 'all' in itemData %}
             <div class="tab-pane active overflow-auto" :id="'details-' + currentVariation.variation.id" role="tabpanel" v-if="isDescriptionTabActive">
@@ -130,9 +137,9 @@
                         <tr>
                             <td>{{ trans("Ceres::Template.singleItemDimensions") }}</td>
                             <td>
-                                <span>${ currentVariation.variation.lengthMM }</span>&times;<!--
-                                                --><span>${ currentVariation.variation.widthMM }</span>&times;<!--
-                                                --><span>${ currentVariation.variation.heightMM }</span> mm
+                                <span>${ currentVariation.variation.lengthMM }</span>&times;
+                                                <span>${ currentVariation.variation.widthMM }</span>&times;
+                                                <span>${ currentVariation.variation.heightMM }</span> mm
                             </td>
                         </tr>
                     {% endif %}
@@ -149,6 +156,7 @@
         </div>
 
         <slot name="add-detail-tabs-content"></slot>
-    <!-- </div> -->
+     </div>
 </div>
+-->
 <!-- ./ITEM DESCRIPTION -->
