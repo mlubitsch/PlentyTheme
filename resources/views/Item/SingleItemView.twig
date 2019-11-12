@@ -31,7 +31,7 @@
     
         {%  for variationProperty in item.documents[0].data.variationProperties %}
             {% if variationProperty.property.id == 2 %}
-                <template #test>{{ variationProperty.values.value|raw }}</template>                                                 	                    
+                <template #itemviewbox-2>{{ variationProperty.values.value|raw }}</template>                                                 	                    
             {% endif %}
         {% endfor %}   
          
