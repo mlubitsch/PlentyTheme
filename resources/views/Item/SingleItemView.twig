@@ -28,16 +28,53 @@
             {{ ImageCarouselOverride }}
         {% endif %}
     </template>
-            
+
+    <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| -->            
     {%  for variationProperty in item.documents[0].data.variationProperties %}
         {% if variationProperty.property.id == 2 %} 
             {% set itemviewbox2 = variationProperty.values.value %}
+        {% endif %}            
+        {% if variationProperty.property.id == 5 %} 
+            {% set itemviewbox5 = variationProperty.values.value %}
+        {% endif %}            
+        {% if variationProperty.property.id == 7 %} 
+            {% set itemviewbox7 = variationProperty.values.value %}
+        {% endif %}            
+        {% if variationProperty.property.id == 10 %} 
+            {% set itemviewbox10 = variationProperty.values.value %}
+        {% endif %}            
+        {% if variationProperty.property.id == 12 %} 
+            {% set itemviewbox12 = variationProperty.values.value %}
+        {% endif %}            
+        {% if variationProperty.property.id == 14 %} 
+            {% set itemviewbox14 = variationProperty.values.value %}
+        {% endif %}            
+        {% if variationProperty.property.id == 16 %} 
+            {% set itemviewbox16 = variationProperty.values.value %}
+        {% endif %}                            
+        {% if variationProperty.property.id == 18 %} 
+            {% set itemviewbox18 = variationProperty.values.value %}
+        {% endif %}            
+        {% if variationProperty.property.id == 19 %} 
+            {% set itemviewbox19 = variationProperty.values.value %}
+        {% endif %}            
+        {% if variationProperty.property.id == 20 %} 
+            {% set itemviewbox20 = variationProperty.values.value %}
+        {% endif %}            
+        {% if variationProperty.property.id == 21 %} 
+            {% set itemviewbox21 = variationProperty.values.value %}
         {% endif %}            
     {% endfor %}   
     
     <template #itemviewboxes>
         
-      
+        {%  for variationProperty in item.documents[0].data.variationProperties %}            
+            {% if variationProperty.property.id == 2 %}                           
+                <div class="widget widget-grid row invert widget-full-width">     
+                    <div>{{ itemviewbox2|raw }}</div>
+                </div>
+            {% endif %}              
+        {% endfor %}         
     </template>
          
 </single-item>
