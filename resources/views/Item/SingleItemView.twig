@@ -32,14 +32,15 @@
      
      
     <template #itemviewboxes>
-        {% set marctest = 'ausserhalb schleife' %}      
-        <div>test</div>     
+        {% set marctest = 'ausserhalb schleife' %}           
         {%  for variationProperty in item.documents[0].data.variationProperties %}            
             {% if variationProperty.property.id == 2 %}                
-                {% set itemViewbox2 = variationProperty.values.value %}                
+                {% set itemViewbox2 = variationProperty.values.value %}
+                <div>testcase2</div>                
             {% endif %}            
             {% if variationProperty.property.id == 5 %} 
-                {% set itemviewbox5 = variationProperty.values.value %}                
+                {% set itemviewbox5 = variationProperty.values.value %}
+                <div>testcase5</div>
             {% endif %}            
         {% endfor %}   
     
@@ -47,8 +48,11 @@
         
         {%  for variationProperty in item.documents[0].data.variationProperties %}            
             {% if variationProperty.property.id == 2 %}                           
-                <div class="widget widget-grid row invert widget-full-width">                    
-                    <div>{{ itemViewbox2 }}</div>                                        
+                <div class="widget widget-grid row invert widget-full-width">
+                    <hr />
+                    <div>{{ itemViewbox2 }}</div>
+                    <hr />
+                    <div>{{ variationProperty.values.value|raw }}</div>
                 </div>
             {% endif %}              
         {% endfor %}         
