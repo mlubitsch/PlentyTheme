@@ -30,43 +30,19 @@
     </template>
 
      
-    <template #itemviewboxes>           
-    {%  for variationProperty in item.documents[0].data.variationProperties %}
-    {% set marctest = 'bin drin' %}
-        {% if variationProperty.property.id == 2 %} 
-                        
-        {% endif %}            
-        {% if variationProperty.property.id == 5 %} 
-            {% set itemviewbox5 = variationProperty.values.value %}
-        {% endif %}            
-        {% if variationProperty.property.id == 7 %} 
-            {% set itemviewbox7 = variationProperty.values.value %}
-        {% endif %}            
-        {% if variationProperty.property.id == 10 %} 
-            {% set itemviewbox10 = variationProperty.values.value %}
-        {% endif %}            
-        {% if variationProperty.property.id == 12 %} 
-            {% set itemviewbox12 = variationProperty.values.value %}
-        {% endif %}            
-        {% if variationProperty.property.id == 14 %} 
-            {% set itemviewbox14 = variationProperty.values.value %}
-        {% endif %}            
-        {% if variationProperty.property.id == 16 %} 
-            {% set itemviewbox16 = variationProperty.values.value %}
-        {% endif %}                            
-        {% if variationProperty.property.id == 18 %} 
-            {% set itemviewbox18 = variationProperty.values.value %}
-        {% endif %}            
-        {% if variationProperty.property.id == 19 %} 
-            {% set itemviewbox19 = variationProperty.values.value %}
-        {% endif %}            
-        {% if variationProperty.property.id == 20 %} 
-            {% set itemviewbox20 = variationProperty.values.value %}
-        {% endif %}            
-        {% if variationProperty.property.id == 21 %} 
-            {% set itemviewbox21 = variationProperty.values.value %}
-        {% endif %}            
-    {% endfor %}   
+     
+    <template #itemviewboxes>
+        {% set marctest = 'ausserhalb schleife' %}           
+        {%  for variationProperty in item.documents[0].data.variationProperties %}            
+            {% if variationProperty.property.id == 2 %} 
+                {% set marctest = 'innerhalb schleife' %}
+                <div>testcase2</div>                
+            {% endif %}            
+            {% if variationProperty.property.id == 5 %} 
+                {% set itemviewbox5 = variationProperty.values.value %}
+                <div>testcase5</div>
+            {% endif %}            
+        {% endfor %}   
     
     
         
