@@ -30,10 +30,10 @@
     </template>
 
     <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| --> 
-    {% set marctest = 'testtext' %}           
+               
     {%  for variationProperty in item.documents[0].data.variationProperties %}
         {% if variationProperty.property.id == 2 %} 
-            {% set testingvar = variationProperty.values.value %}            
+            {% set marctest = 'bin drin' %}            
         {% endif %}            
         {% if variationProperty.property.id == 5 %} 
             {% set itemviewbox5 = variationProperty.values.value %}
