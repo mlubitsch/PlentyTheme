@@ -32,7 +32,8 @@
      
      
     <template #itemviewboxes>
-        {% set marctest = 'ausserhalb schleife' %}           
+        {% set marctest = 'ausserhalb schleife' %}      
+        <div>test</div>     
         {%  for variationProperty in item.documents[0].data.variationProperties %}            
             {% if variationProperty.property.id == 2 %}                
                 {% set itemViewbox2 = variationProperty.values.value %}                
