@@ -30,7 +30,9 @@
     </template>
             
     {%  for variationProperty in item.documents[0].data.variationProperties %}
-        {% set itemviewbox{variationProperty.property.id} = variationProperty.values.value %}            
+        {% if variationProperty.property.id == 2 %} 
+            {% set itemviewbox2 = variationProperty.values.value %}
+        {% endif %}            
     {% endfor %}   
     
     <template #itemviewboxes>
