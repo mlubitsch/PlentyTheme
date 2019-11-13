@@ -32,7 +32,7 @@
     <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| -->            
     {%  for variationProperty in item.documents[0].data.variationProperties %}
         {% if variationProperty.property.id == 2 %} 
-            {% set test2 = variationProperty.values.value %}
+            {% set testingvar = variationProperty.values.value %}            
         {% endif %}            
         {% if variationProperty.property.id == 5 %} 
             {% set itemviewbox5 = variationProperty.values.value %}
@@ -72,7 +72,7 @@
             {% if variationProperty.property.id == 2 %}                           
                 <div class="widget widget-grid row invert widget-full-width">
                     <hr />
-                    <div>{{ test2 }}</div>
+                    <div>{{ testingvar }}</div>
                     <hr />
                     <div>{{ variationProperty.values.value|raw }}</div>
                 </div>
