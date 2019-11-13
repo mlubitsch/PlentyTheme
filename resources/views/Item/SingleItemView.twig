@@ -29,7 +29,7 @@
         {% endif %}
     </template>
 
-    <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| --> 
+     
     <template #itemviewboxes>           
     {%  for variationProperty in item.documents[0].data.variationProperties %}
         {% if variationProperty.property.id == 2 %} 
@@ -80,5 +80,5 @@
             {% endif %}              
         {% endfor %}         
     </template>
-         
+    <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| -->     
 </single-item>
