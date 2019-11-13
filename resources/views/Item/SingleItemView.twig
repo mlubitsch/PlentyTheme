@@ -30,20 +30,12 @@
     </template>
             
     {%  for variationProperty in item.documents[0].data.variationProperties %}
-        {% set itemviewbox{{variationProperty.property.id}} = variationProperty.values.value %}            
+        {% set itemviewbox{variationProperty.property.id} = variationProperty.values.value %}            
     {% endfor %}   
     
     <template #itemviewboxes>
         
-        <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| -->
-        {%  for variationProperty in item.documents[0].data.variationProperties %}            
-            {% if variationProperty.property.id == 2 %}                           
-                <div class="widget widget-grid row invert widget-full-width">     
-                    <div>{{ itemviewbox2|raw }}</div>
-                </div>
-            {% endif %}            
-  
-        {% endfor %}   
+      
     </template>
          
 </single-item>
