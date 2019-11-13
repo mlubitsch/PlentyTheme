@@ -28,11 +28,35 @@
             {{ ImageCarouselOverride }}
         {% endif %}
     </template>
+            
+    {%  for variationProperty in item.documents[0].data.variationProperties %}
+        {% set itemviewbox{{variationProperty.property.id}} = variationProperty.values.value %}            
+    {% endfor %}   
     
-        {%  for variationProperty in item.documents[0].data.variationProperties %}
-            {% if variationProperty.property.id == 2 %}
-                <template #itemviewbox-2>{{ variationProperty.values.value|raw }}</template>                                                 	                    
-            {% endif %}
+    <template #itemviewboxes>
+        
+        <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| -->
+        {%  for variationProperty in item.documents[0].data.variationProperties %}            
+            {% if variationProperty.property.id == 2 %}                           
+                <div class="widget widget-grid row invert widget-full-width">     
+                    <div>{{ itemviewbox2|raw }}</div>
+            {% endif %}            
+            {% if variationProperty.property.id == 5 %}                           
+                <div class="widget widget-grid row invert widget-full-width">     
+                    <div>{{ itemviewbox5|raw }}</div>
+            {% endif %}            
+            {% if variationProperty.property.id == 10 %}                           
+                <div class="widget widget-grid row invert widget-full-width">     
+                    <div>{{ itemviewbox10|raw }}</div>
+            {% endif %}            
+            {% if variationProperty.property.id == 18 %}                           
+                <div class="widget widget-grid row invert widget-full-width">     
+                    <div>{{ itemviewbox18|raw }}</div>
+                    {% if itemviewbox7|trim is not empty %}
+                        <div>{{ itemviewbox7|raw }}</div>
+                    {% endif%}                                                 	                    
+            {% endif %}            
         {% endfor %}   
+    </template>
          
 </single-item>
