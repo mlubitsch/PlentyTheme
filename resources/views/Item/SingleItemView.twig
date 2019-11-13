@@ -71,7 +71,7 @@
         {%  for variationProperty in item.documents[0].data.variationProperties %}            
             {% if variationProperty.property.id == 2 %}                           
                 <div class="widget widget-grid row invert widget-full-width">     
-                    <div>{{ itemviewbox2|raw }}</div>
+                    <div>{{ variationProperty.values.value|raw }}</div>
                 </div>
             {% endif %}              
         {% endfor %}         
