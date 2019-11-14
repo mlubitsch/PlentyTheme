@@ -58,7 +58,7 @@
         {%  for variationProperty in item.documents[0].data.variationProperties %}            
             {% if variationProperty.property.id == 2 %}                           
                 <div class="widget widget-grid row invert widget-full-width">                    
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{ variationProperty.values.value|raw }}</div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><div class="mt-5 mr-5 mb-3 ml-5">{{ variationProperty.values.value|raw }}</div></div>
                 </div>
             {% endif %}              
             {% if variationProperty.property.id == 5 %}                           
@@ -68,14 +68,14 @@
             {% endif %}              
             {% if variationProperty.property.id == 10 %}                           
                 <div class="widget widget-grid row widget-full-width">                    
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{ variationProperty.values.value|raw }}</div>                                        
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><div class="mt-5 mr-5 mb-3 ml-5">{{ variationProperty.values.value|raw }}</div></div>                                        
                 </div>
             {% endif %}              
             {% if variationProperty.property.id == 18 %}                           
                 <div class="widget widget-grid row invert widget-full-width">
                     {% if itemviewbox7|length > 0 %}
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><img src="{{ variationProperty.values.value }}" /></div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">{{ itemviewbox7|raw }}</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><img src="{{ variationProperty.values.value|raw }}" /></div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><div class="mt-5 mr-5 mb-3 ml-5">{{ itemviewbox7|raw }}</div></div>
                     {% else %}                    
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{ variationProperty.values.value|raw }}</div>                                                
                     {% endif %}                                                                          
@@ -84,7 +84,7 @@
             {% if variationProperty.property.id == 19 %}                           
                 <div class="widget widget-grid row invert widget-full-width">                    
                     {% if itemviewbox12|length > 0 %}
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">{{ variationProperty.values.value|raw }}</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><div class="mt-5 mr-5 mb-3 ml-5">{{ variationProperty.values.value|raw }}</div></div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><img src="{{ itemviewbox12|raw }}" /></div>
                     {% else %}                    
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{ variationProperty.values.value|raw }}</div>                                                
@@ -94,7 +94,7 @@
             {% if variationProperty.property.id == 20 %}                           
                 <div class="widget widget-grid row widget-full-width">                    
                     {% if itemviewbox14|length > 0 %}
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">{{ variationProperty.values.value|raw }}</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><div class="mt-5 mr-5 mb-3 ml-5">{{ variationProperty.values.value|raw }}</div></div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><img src="{{ itemviewbox14|raw }}" /></div>
                     {% else %}                    
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{ variationProperty.values.value|raw }}</div>                                                
@@ -105,7 +105,7 @@
                 <div class="widget widget-grid row invert widget-full-width">                    
                     {% if itemviewbox16|length > 0 %}
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><img src="{{ variationProperty.values.value|raw }}" /></div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">{{ itemviewbox16|raw }}</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><div class="mt-5 mr-5 mb-3 ml-5">{{ itemviewbox16|raw }}</div></div>
                     {% else %}                    
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{ variationProperty.values.value|raw }}</div>                                                
                     {% endif %}                                                                          
