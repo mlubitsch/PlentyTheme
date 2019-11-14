@@ -47,7 +47,7 @@
         {% set itemviewbox21 = "" %}
                       
         {%  for variationProperty in item.documents[0].data.variationProperties %}                        
-                {% set itemviewbox{variationProperty.property.id} = variationProperty.values.value %}
+                {% set itemviewbox{{variationProperty.property.id}} = variationProperty.values.value %}
                         
         {% endfor %}   
     
