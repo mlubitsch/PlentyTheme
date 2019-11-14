@@ -30,17 +30,24 @@
     </template>
 
      
-     
+    <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| --> 
+    
     <template #itemviewboxes>
-              
-        {%  for variationProperty in item.documents[0].data.variationProperties %}            
-            {% if variationProperty.property.id == 2 %}
-                {% set marctest = variationProperty.values.value %}
-                <div>testcase2</div>                
-            {% endif %}            
-            {% if variationProperty.property.id == 5 %} 
-                {% set itemviewbox5 = variationProperty.values.value %}
-                <div>testcase5</div>
+    
+        {% set itemviewbox2  = "" %}
+        {% set itemviewbox5  = "" %}
+        {% set itemviewbox7  = "" %}
+        {% set itemviewbox10 = "" %}
+        {% set itemviewbox12 = "" %}
+        {% set itemviewbox14 = "" %}
+        {% set itemviewbox16 = "" %}
+        {% set itemviewbox18 = "" %}
+        {% set itemviewbox19 = "" %}
+        {% set itemviewbox20 = "" %}
+        {% set itemviewbox21 = "" %}
+                      
+        {%  for variationProperty in item.documents[0].data.variationProperties %}                        
+                {% set itemviewbox{variationProperty.property.id} = variationProperty.values.value %}
             {% endif %}            
         {% endfor %}   
     
@@ -50,12 +57,12 @@
             {% if variationProperty.property.id == 2 %}                           
                 <div class="widget widget-grid row invert widget-full-width">
                     <hr />
-                    <div>{{ marctest }}</div>
+                    <div>{{ itemviewbox2 }}</div>
                     <hr />
                     <div>{{ variationProperty.values.value|raw }}</div>
                 </div>
             {% endif %}              
         {% endfor %}         
     </template>
-    <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| -->     
+         
 </single-item>
