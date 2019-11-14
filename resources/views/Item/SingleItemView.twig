@@ -30,39 +30,83 @@
     </template>
 
      
-    <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| --> 
-    
+    <!-- HAUPTCONTAINER (SUBCONTAINER) 2|5|10|18(7)|19(12)|20(14)|21(16)| -->     
     <template #itemviewboxes>
     
-        {% set itemviewbox2  = "" %}
-        {% set itemviewbox5  = "" %}
+        <!-- CHECK SUBCONTAINER -->
         {% set itemviewbox7  = "" %}
-        {% set itemviewbox10 = "" %}
         {% set itemviewbox12 = "" %}
         {% set itemviewbox14 = "" %}
         {% set itemviewbox16 = "" %}
-        {% set itemviewbox18 = "" %}
-        {% set itemviewbox19 = "" %}
-        {% set itemviewbox20 = "" %}
-        {% set itemviewbox21 = "" %}
                       
         {%  for variationProperty in item.documents[0].data.variationProperties %}            
-            {% if variationProperty.property.id == 2 %}
-                {% set itemviewbox2 = variationProperty.values.value %}                
+            {% if variationProperty.property.id == 7 %}
+                {% set itemviewbox7 = variationProperty.values.value %}                
+            {% endif %}            
+            {% if variationProperty.property.id == 12 %}
+                {% set itemviewbox12 = variationProperty.values.value %}                
+            {% endif %}            
+            {% if variationProperty.property.id == 14 %}
+                {% set itemviewbox14 = variationProperty.values.value %}                
+            {% endif %}            
+            {% if variationProperty.property.id == 16 %}
+                {% set itemviewbox16 = variationProperty.values.value %}                
             {% endif %}            
         {% endfor %}   
+        <!-- END CHECK SUBCONTAINER -->
     
-    
-        
         {%  for variationProperty in item.documents[0].data.variationProperties %}            
             {% if variationProperty.property.id == 2 %}                           
-                <div class="widget widget-grid row invert widget-full-width">
-                    <hr />
-                    <div>{{ itemviewbox2 }}</div>
-                    <hr />
+                <div class="widget widget-grid row invert widget-full-width">                    
                     <div>{{ variationProperty.values.value|raw }}</div>
                 </div>
             {% endif %}              
+            {% if variationProperty.property.id == 5 %}                           
+                <div class="widget widget-grid row invert widget-full-width">                    
+                    <div>{{ variationProperty.values.value|raw }}</div>                                        
+                </div>
+            {% endif %}              
+            {% if variationProperty.property.id == 10 %}                           
+                <div class="widget widget-grid row invert widget-full-width">                    
+                    <div>{{ variationProperty.values.value|raw }}</div>                                        
+                </div>
+            {% endif %}              
+            {% if variationProperty.property.id == 18 %}                           
+                <div class="widget widget-grid row invert widget-full-width">                    
+                    <div>{{ variationProperty.values.value|raw }}</div>      
+                    {% if itemviewbox7|length > 0 %}
+                        <div>{{ itemviewbox7|raw }}</div>
+                    {% endif %}                                                                          
+                </div>
+            {% endif %}              
+            {% if variationProperty.property.id == 19 %}                           
+                <div class="widget widget-grid row invert widget-full-width">                    
+                    <div>{{ variationProperty.values.value|raw }}</div>    
+                    {% if itemviewbox12|length > 0 %}
+                        <div>{{ itemviewbox12|raw }}</div>
+                    {% endif %}                                        
+                                    
+                </div>
+            {% endif %}              
+            {% if variationProperty.property.id == 20 %}                           
+                <div class="widget widget-grid row invert widget-full-width">                    
+                    <div>{{ variationProperty.values.value|raw }}</div> 
+                    {% if itemviewbox14|length > 0 %}
+                        <div>{{ itemviewbox14|raw }}</div>
+                    {% endif %}                                        
+                                       
+                </div>
+            {% endif %}              
+            {% if variationProperty.property.id == 21 %}                           
+                <div class="widget widget-grid row invert widget-full-width">                    
+                    <div>{{ variationProperty.values.value|raw }}</div>
+                    {% if itemviewbox16|length > 0 %}
+                        <div>{{ itemviewbox16|raw }}</div>
+                    {% endif %}                                        
+                                        
+                </div>
+            {% endif %}              
+
         {% endfor %}         
     </template>
          
