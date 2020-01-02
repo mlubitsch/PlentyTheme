@@ -2,9 +2,9 @@
 
 namespace PlentyTheme\Providers;
 
-use Ceres\Caching\NavigationCacheSettings;
+#use Ceres\Caching\NavigationCacheSettings;
 use Ceres\Caching\SideNavigationCacheSettings;
-#use IO\Services\ContentCaching\Services\Container;
+use IO\Services\ContentCaching\Services\Container;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\Templates\Twig;
