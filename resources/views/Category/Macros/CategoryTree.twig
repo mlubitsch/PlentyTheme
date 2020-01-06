@@ -1,8 +1,5 @@
-{% if lang == 'de' %}
-    {% set rootCategoryIds = [449,450,451,452] %}
-{% else %}
-    {% set rootCategoryIds = [449,450,451,452] %}
-{% endif %}
+{% set rootCategoryIds = [449,450,451,452] %}
+
 
 {% macro get_children(category, currentScopeUrl, level, megaMenuLevels, maxItems) %}
     {% set megaMenuLevels = megaMenuLevels | default(1) %}
@@ -41,7 +38,7 @@
 
     {% for category in categories %}
 
-        {% if (category.details | length > 0) %}
+        {% if (category.details | length > 0) and category.id in rootCategoryIds %}
 
             {% if urls.includeLanguage %}
                 {% set currentScopeUrl = "/" ~ category.details[0].lang ~  "/" ~ category.details[0].nameUrl %}
