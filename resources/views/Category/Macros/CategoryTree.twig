@@ -11,7 +11,7 @@
     {% set counter = 0 %}
     {% if level < megaMenuLevels %}
         {% for child in category.children if counter < maxItems[level] %}
-            {% if (child.details | length > 0) and child.id in rootCategoryIds %}
+            {% if (child.details | length > 0)%}
                 {% if level == 1 %}
                     <li><ul class="nav-dropdown-inner">
                 {% endif %}
@@ -41,7 +41,7 @@
 
     {% for category in categories %}
 
-        {% if category.details | length > 0 %}
+        {% if (category.details | length > 0) and category.id in rootCategoryIds %}
 
             {% if urls.includeLanguage %}
                 {% set currentScopeUrl = "/" ~ category.details[0].lang ~  "/" ~ category.details[0].nameUrl %}
