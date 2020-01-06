@@ -41,7 +41,7 @@
 
     {% for category in categories %}
 
-        {% if (category.details | length > 0) and category.id in rootCategoryIds %}
+        {% if (category.details | length > 0) %}
 
             {% if urls.includeLanguage %}
                 {% set currentScopeUrl = "/" ~ category.details[0].lang ~  "/" ~ category.details[0].nameUrl %}
@@ -84,7 +84,7 @@
 
             {% else %}
 
-                <li>
+                <li data-test="{{category.id}}">
                     <a href="{{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}">{{ category.details[0].name }}</a>
                 </li>
 
