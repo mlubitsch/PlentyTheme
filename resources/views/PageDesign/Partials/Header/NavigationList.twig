@@ -1,6 +1,6 @@
 {% import "PlentyTheme::Category.Macros.CategoryTree" as Tree %}
 {% for t in categories %}
-    <div>{{t.id}} - {{t.details[0].nameUrl}}</div>
+    <div>{{lang}} | {{t.id}} - {{t.details[0].nameUrl}}</div>
 {% endfor %}
 
 <ul class="mainmenu">
