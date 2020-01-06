@@ -1,7 +1,4 @@
 {% import "PlentyTheme::Category.Macros.CategoryTree" as Tree %}
-{% for t in categories %}
-    <div>{{lang}} | {{t.id}} - {{t.details[0].nameUrl}}</div>
-{% endfor %}
 
 <ul class="mainmenu">
     {{ Tree.get_nav_bar(

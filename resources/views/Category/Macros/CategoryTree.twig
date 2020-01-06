@@ -1,5 +1,8 @@
-
-{% set rootCategoryIds = [449,450,451,452] %}
+{% if lang == 'de' %}
+    {% set rootCategoryIds = [449,450,451,452] %}
+{% else %}
+    {% set rootCategoryIds = [449,450,451,452] %}
+{% endif %}
 
 {% macro get_children(category, currentScopeUrl, level, megaMenuLevels, maxItems) %}
     {% set megaMenuLevels = megaMenuLevels | default(1) %}
@@ -10,7 +13,7 @@
         {% for child in category.children if counter < maxItems[level] %}
             {% if (child.details | length > 0) and child.id in rootCategoryIds %}
                 {% if level == 1 %}
-                    <li><ul class="nav-dropdown-inner test2">
+                    <li><ul class="nav-dropdown-inner">
                 {% endif %}
                     <li class="level{{ level }}">
                         {% set newScope = currentScopeUrl ~ "/" ~ child.details[0].nameUrl %}
