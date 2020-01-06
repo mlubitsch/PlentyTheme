@@ -1,4 +1,4 @@
-{% set rootCategoryIds = [449,450,451,452] %}
+
 
 
 {% macro get_children(category, currentScopeUrl, level, megaMenuLevels, maxItems) %}
@@ -35,7 +35,8 @@
     {% import _self as navbar %}
     {% set counter = 0 %}
     {% set megaMenuLevels = megaMenuLevels | default(1) %}
-
+    {% set rootCategoryIds = [449,450,451,452] %}
+    
     {% for category in categories %}
 
         {% if (category.details | length > 0) and category.id in rootCategoryIds %}
