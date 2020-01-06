@@ -1,6 +1,4 @@
 
-
-
 {% macro get_children(category, currentScopeUrl, level, megaMenuLevels, maxItems) %}
     {% set megaMenuLevels = megaMenuLevels | default(1) %}
     {% set maxItems = maxItems | default({"1": 30, "2": 3, "3": 2}) %}
@@ -35,8 +33,14 @@
     {% import _self as navbar %}
     {% set counter = 0 %}
     {% set megaMenuLevels = megaMenuLevels | default(1) %}
-    {% set rootCategoryIds = [449,450,451,452] %}
     
+    {% if lang == 'de' %}
+        {% set rootCategoryIds = [449,450,451,452] %}
+    {% else %}
+        {% set rootCategoryIds = [449,450,451,452] %}
+    {% endif %}
+
+
     {% for category in categories %}
 
         {% if (category.details | length > 0) and category.id in rootCategoryIds %}
@@ -82,7 +86,7 @@
 
             {% else %}
 
-                <li data-test="{{category.id}}">
+                <li data-test="{{category.id}}" data-url="{{currentScopeUrl}}">
                     <a href="{{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}">{{ category.details[0].name }}</a>
                 </li>
 
