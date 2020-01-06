@@ -7,7 +7,7 @@
         {% for child in category.children if counter < maxItems[level] %}
             {% if (child.details | length > 0) %}
                 {% if level == 1 %}
-                    <li><ul class="nav-dropdown-inner">
+                    <li><ul class="nav-dropdown-inner test2">
                 {% endif %}
                     <li class="level{{ level }}">
                         {% set newScope = currentScopeUrl ~ "/" ~ child.details[0].nameUrl %}
