@@ -35,9 +35,11 @@
     {% set megaMenuLevels = megaMenuLevels | default(1) %}
     
     {% if lang == 'de' %}
-        {% set rootCategoryIds = [449,450,451,452] %}
+        {% set rootCategoryIds = [449,894,893,452,476,588,585,876,587,589,451] %}
+    {% elseif lang == 'fr' %}
+        {% set rootCategoryIds = [900,908,906,907,901,903,902,904,905] %}
     {% else %}
-        {% set rootCategoryIds = [449,450,451,452] %}
+        {% set rootCategoryIds = [444,446,447,496,899,592,591,590,595] %}
     {% endif %}
 
 
