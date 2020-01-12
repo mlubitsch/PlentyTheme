@@ -138,6 +138,24 @@ nav.navbar.megamenu{
 .overlay-left img, .overlay-right img{
     width: 100%;
 }
+.img-full-width{
+    width: 100%;
+    height: auto;
+}
+.overlay-btn{
+    z-index: 20; 
+    position: absolute; 
+    bottom: -28px; 
+    margin: auto;
+    left: 0;
+    right: 0;   
+}
+.overlay-btn button{
+    padding: 18px 46px;
+    border: 2px solid black;
+    background-color:white;
+    font-size:16px;
+}
 .overlay-left div.widget-inner, .overlay-right div.widget-inner{
     padding-left: 0 !important;
     padding-right: 0 !important;
