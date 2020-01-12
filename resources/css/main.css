@@ -142,7 +142,8 @@ nav.navbar.megamenu{
     width: 100%;
     height: auto;
 }
-.overlay-btn{
+.overlay-btn,
+.overlay-btn-invert{
     z-index: 20; 
     position: absolute; 
     bottom: -28px; 
@@ -154,6 +155,13 @@ nav.navbar.megamenu{
     padding: 18px 46px;
     border: 2px solid black;
     background-color:white;
+    color:black;
+    font-size:16px;
+}
+.overlay-btn-invert button{
+    border: 2px solid white;
+    background-color:black;
+    color: white;
     font-size:16px;
 }
 .overlay-left div.widget-inner, .overlay-right div.widget-inner{
