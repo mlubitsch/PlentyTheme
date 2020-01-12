@@ -159,6 +159,7 @@ nav.navbar.megamenu{
     font-size:16px;
 }
 .overlay-btn-invert button{
+    padding: 18px 46px;
     border: 2px solid white;
     background-color:black;
     color: white;
