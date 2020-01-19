@@ -39,9 +39,8 @@
 .overlay-box{
     position:relative;
     left:-10;
-    z-index:20;
-    border: 1px solid black;
-    background-color:yellow;
+    z-index:20;    
+    background-color:white;
     padding:20px;
 }
 
@@ -255,9 +254,7 @@ nav.navbar.megamenu{
     
     .overlay-box{
         left:0;
-        z-index:20;
-        border: none;
-        background-color:none;
+        z-index:20;                
         padding:0;
         text-align: center;   
     }
