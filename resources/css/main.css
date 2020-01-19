@@ -29,6 +29,11 @@
 .widget{
     /* margin-bottom: 0.2rem; */
 }
+.height-100,
+.height-100 > div.widget-inner{
+    height: 100% !important;
+}
+
 .cmp-country-settings, .cmp-currency-select,
 div:not(.top-bar) > .page-header > div > .cmp-search-box{
     top: 65px;
