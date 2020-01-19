@@ -37,6 +37,7 @@
     width:100%;
 }
 .overlay-box{
+    color:black;
     position:relative;
     left:0;
     z-index:20;    
