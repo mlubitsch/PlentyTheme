@@ -41,7 +41,7 @@
     left:0;
     z-index:20;    
     background-color: white;
-    text-align:center;    
+    text-align:center;        
 }
 
 
@@ -253,7 +253,7 @@ nav.navbar.megamenu{
 @media screen and (min-width: 768px) {
     
     .overlay-box{
-        left:-30 !important;                
+        left:-70px !important;                
         padding:20px !important;
         text-align: left !important;   
     }
