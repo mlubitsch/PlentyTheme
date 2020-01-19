@@ -38,10 +38,10 @@
 }
 .overlay-box{
     position:relative;
-    left:-10;
+    left:0;
     z-index:20;    
-    background-color:white;
-    padding:20px;
+    background-color: white;
+    text-align:center;    
 }
 
 
@@ -253,10 +253,9 @@ nav.navbar.megamenu{
 @media screen and (min-width: 768px) {
     
     .overlay-box{
-        left:0;
-        z-index:20;                
-        padding:0;
-        text-align: center;   
+        left:-30 !important;                
+        padding:20px !important;
+        text-align: left !important;   
     }
     
     .home-margin-box{
