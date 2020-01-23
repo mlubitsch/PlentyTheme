@@ -12,8 +12,14 @@
                 {% endif %}
                     <li data-test="{{child.id}}" class="level{{ level }}">
                         {% set newScope = currentScopeUrl ~ "/" ~ child.details[0].nameUrl %}
-                        <a @touchstart.stop href="
+                        <a @touchstart.stop href="                        
+                        {% if child.id == 588 %}
+                            /latex-pflege-politur-waschmittel/begloss-special-wash-latex-waschmittel/special-wash-latex-waschmittel_229_1562/
+                        {% elseif child.id = 587 %}
+                            /latex-pflege-politur-waschmittel/begloss-talkum-powder-latex-puder/begloss-talkum-puder_366_1297/                            
+                        {% else %}                        
                             {{ newScope }}{{ urls.trailingSlashSuffix }}
+                        {% endif %}
                         ">{{ child.details[0].name }}</a>
                     </li>
                     {% if child.children %}
