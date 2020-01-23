@@ -102,8 +102,7 @@
     {% import _self as sidemenu %}
     
     {% if lang == 'de' %}
-        {% set rootCategoryIds = [449,894,893,452,476,588,585,876,587,589,451,450] %}
-        {% set categoryLinks   = [476 => '/begloss-kunstleder-pflege-waschmittel/begloss-special-wash-kunstleder-waschmittel_226_1550/'] %}
+        {% set rootCategoryIds = [449,894,893,452,476,588,585,876,587,589,451,450] %}        
     {% elseif lang == 'fr' %}
         {% set rootCategoryIds = [900,908,906,907,901,903,902,904,905] %}
     {% else %}
@@ -116,10 +115,7 @@
                 {% if entry.url.value is not empty %}
                     {% if entry.url.type == 'category' %}
                         {% set __category = services.category.get(entry.url.value) %}
-                        
-                            {% set realUrl = services.category.getURL(__category) %}
-                        
-                        
+                        {% set realUrl = services.category.getURL(__category) %}
                     {% endif %}
                     {% if entry.url.type == 'item' %}
                         {% set __itemData = services.item.getVariation(entry.url.value) %}
