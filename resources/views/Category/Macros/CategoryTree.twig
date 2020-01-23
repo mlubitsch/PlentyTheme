@@ -74,13 +74,7 @@
                                     <li>
                                         <ul class="nav-dropdown-inner">
                                             <li>
-                                                <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}{{ urls.trailingSlashSuffix }}">
-                                                {% if category.id == 476 %}                                                
-                                                    begloss-special-wash-kunstleder-waschmittel_226_1550/
-                                                {% else %}
-                                                    {{ child.details[0].name }}
-                                                {% endif %}
-                                                </a>
+                                                <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}{{ urls.trailingSlashSuffix }}">{{ child.details[0].name }}</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -95,7 +89,11 @@
             {% else %}
 
                 <li data-test="{{category.id}}" data-url="{{currentScopeUrl}}">
-                    <a href="{{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}">{{ category.details[0].name }}</a>
+                    {% if category.id == 476 %}                                                
+                        <a href="/begloss-kunstleder-pflege-waschmittel/begloss-special-wash-kunstleder-waschmittel_226_1550/">{{ category.details[0].name }}</a>                        
+                    {% else %}
+                        <a href="{{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}">{{ category.details[0].name }}</a>
+                    {% endif %}
                 </li>
 
             {% endif %}
