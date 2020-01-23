@@ -116,11 +116,10 @@
                 {% if entry.url.value is not empty %}
                     {% if entry.url.type == 'category' %}
                         {% set __category = services.category.get(entry.url.value) %}
-                        {% if category.id in categoryLinks %}
+                        
                             {% set realUrl = services.category.getURL(__category) %}
-                        {% else %}
-                            {% set realUrl = services.category.getURL(__category) %}
-                        {% endif %}
+                        
+                        
                     {% endif %}
                     {% if entry.url.type == 'item' %}
                         {% set __itemData = services.item.getVariation(entry.url.value) %}
