@@ -74,7 +74,13 @@
                                     <li>
                                         <ul class="nav-dropdown-inner">
                                             <li>
-                                                <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}{{ urls.trailingSlashSuffix }}">{{ child.details[0].name }}</a>
+                                                <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}{{ urls.trailingSlashSuffix }}">
+                                                {% if (category.id == 476 %}                                                
+                                                    begloss-special-wash-kunstleder-waschmittel_226_1550/
+                                                {% else %}
+                                                    {{ child.details[0].name }}
+                                                {% endif %}
+                                                </a>
                                             </li>
                                         </ul>
                                     </li>
@@ -102,7 +108,7 @@
     {% import _self as sidemenu %}
     
     {% if lang == 'de' %}
-        {% set rootCategoryIds = [449,894,893,452,476,588,585,876,587,589,451,450] %}        
+        {% set rootCategoryIds = [449,894,893,452,476,588,585,876,587,589,451,450] %}                
     {% elseif lang == 'fr' %}
         {% set rootCategoryIds = [900,908,906,907,901,903,902,904,905] %}
     {% else %}
