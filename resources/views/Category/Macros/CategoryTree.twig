@@ -10,9 +10,11 @@
                 {% if level == 1 %}
                     <li><ul class="nav-dropdown-inner">
                 {% endif %}
-                    <li class="level{{ level }}">
+                    <li data-test="{{child.id}}" class="level{{ level }}">
                         {% set newScope = currentScopeUrl ~ "/" ~ child.details[0].nameUrl %}
-                        <a @touchstart.stop href="{{ newScope }}{{ urls.trailingSlashSuffix }}">{{ child.details[0].name }}</a>
+                        <a @touchstart.stop href="
+                            {{ newScope }}{{ urls.trailingSlashSuffix }}
+                        ">{{ child.details[0].name }}</a>
                     </li>
                     {% if child.children %}
                         {{ childlist.get_children(child, newScope, level + 1, megaMenuLevels, maxItems) }}
@@ -89,11 +91,19 @@
             {% else %}
 
                 <li data-test="{{category.id}}" data-url="{{currentScopeUrl}}">
-                    {% if category.id == 476 %}                                                
-                        <a href="/begloss-kunstleder-pflege-waschmittel/begloss-special-wash-kunstleder-waschmittel_226_1550/">{{ category.details[0].name }}</a>                        
+                    <a href="
+                    {% if category.id == 476 %}
+                        /begloss-kunstleder-pflege-waschmittel/begloss-special-wash-kunstleder-waschmittel_226_1550/                        
+                    {% elseif category.id == 451 %}
+                        /begloss-leder-pflege-produkte/begloss-leder-lederpolitur-leder-pflege-politur_440_1371/                    
+                    {% elseif category.id == 450 %}
+                        /begloss-wetlook-pflege-produkte/begloss-special-wash-wetlook_225_1549/                                        
+                    {% elseif category.id == 452 %}
+                        /begloss-lack-pvc-pflege-produkte/begloss-special-wash-lack-pvc-waschmittel_554_2218/
                     {% else %}
-                        <a href="{{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}">{{ category.details[0].name }}</a>
+                        {{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}
                     {% endif %}
+                    ">{{ category.details[0].name }}</a>
                 </li>
 
             {% endif %}
