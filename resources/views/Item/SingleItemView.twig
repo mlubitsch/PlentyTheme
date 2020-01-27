@@ -39,8 +39,8 @@
         {% set itemviewbox13 = "" %}       
         {% set itemviewbox14 = "" %}
                       
-            <span>|{{description | json_encode }}|</span>
-            <span>|{{currentVariation.texts | json_encode }}|</span>
+            <span>|{{item.documents[0].data | json_encode }}|</span>
+            
 
         {%  for variationProperty in item.documents[0].data.variationProperties %}                               
             {% if variationProperty.property.id == 11 %}
