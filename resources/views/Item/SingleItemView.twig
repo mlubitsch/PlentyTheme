@@ -39,8 +39,8 @@
         {% set itemviewbox13 = "" %}       
         {% set itemviewbox14 = "" %}
                       
-        {%  for variationProperty in item.documents[0].data.variationProperties %}      
-            <span>|{{variationProperty.property.names.name}}|</span>      
+        {%  for variationProperty in item.documents[0].data.variationProperties %}              
+            <span>|{{variationProperty.texts.description}}|</span>      
             {% if variationProperty.property.id == 11 %}
                 {% set itemviewbox11 = variationProperty.values.value %}                
             {% endif %}            
@@ -109,12 +109,12 @@
                 <div data-name="{{variationProperty.property.names.name}}" class="widget widget-grid row widget-full-width">                    
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 m-0 p-0"><img style="max-width: 100%;" src="{{ variationProperty.values.value|raw }}" /></div>                                        
                 </div>
-                <div data-name="default-beschreibung" class="widget widget-grid row widget-full-width">
+                <div data-name="default_beschreibung" class="widget widget-grid row widget-full-width">
                     <div class="container-max pt-4 pb-4">  
                         <div class="row">
                             <div class="col">
                                 <div class="row">                                                         
-                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><div class="mt-5 mr-5 mb-3 ml-5" v-html="currentVariation.texts.description"></div></div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><div class="mt-5 mr-5 mb-3 ml-5">Beschreibung</div></div>
                                 </div>
                             </div>
                         </div>                                        
