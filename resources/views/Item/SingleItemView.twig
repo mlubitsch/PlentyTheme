@@ -108,6 +108,18 @@
                 <div data-name="{{variationProperty.property.names.name}}" class="widget widget-grid row widget-full-width">                    
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 m-0 p-0"><img style="max-width: 100%;" src="{{ variationProperty.values.value|raw }}" /></div>                                        
                 </div>
+                <div data-name"default-beschreibung" class="widget widget-grid row widget-full-width">
+                    <div class="container-max pt-4 pb-4">  
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">                                                         
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><div class="mt-5 mr-5 mb-3 ml-5">   <div class="my-4" v-html="currentVariation.texts.description"></div></div>
+                                </div>
+                            </div>
+                        </div>                                        
+                    </div>                
+                </div>
+                </div>
             {% endif %}              
             {% if variationProperty.property.id == 7 %}                           
                 <div data-name="{{variationProperty.property.names.name}}" class="widget widget-grid row invert widget-full-width">
