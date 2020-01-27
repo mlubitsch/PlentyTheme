@@ -39,14 +39,6 @@
         {% set itemviewbox13 = "" %}       
         {% set itemviewbox14 = "" %}
 
-            <div>----------</div>                      
-            <span>|{{item.documents[0].data.texts.description }}|</span>
-            <div>----------</div>
-            <span>|{{item.documents[0].data.texts.description | raw }}|</span>
-            <div>----------</div>
-            <span>|{{item.documents[0].data.texts.description | json_encode }}|</span>
-            <div>----------</div>
-
         {%  for variationProperty in item.documents[0].data.variationProperties %}                               
             {% if variationProperty.property.id == 11 %}
                 {% set itemviewbox11 = variationProperty.values.value %}                
@@ -121,7 +113,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="row">                                                         
-                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><div class="mt-5 mr-5 mb-3 ml-5">Beschreibung</div></div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><div class="mt-5 mr-5 mb-3 ml-5">{{ item.documents[0].data.texts.description|raw }}</div></div>
                                 </div>
                             </div>
                         </div>                                        
