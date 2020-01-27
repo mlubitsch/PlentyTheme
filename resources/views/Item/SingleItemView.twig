@@ -40,7 +40,7 @@
         {% set itemviewbox14 = "" %}
                       
         {%  for variationProperty in item.documents[0].data.variationProperties %}              
-            <span>|{{variationProperty.texts.description}}|</span>      
+            <span>|{{variationProperty | json_encode }}|</span>      
             {% if variationProperty.property.id == 11 %}
                 {% set itemviewbox11 = variationProperty.values.value %}                
             {% endif %}            
