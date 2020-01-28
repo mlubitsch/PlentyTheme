@@ -156,6 +156,13 @@ nav.navbar.megamenu{
     top: 0;
     margin-top: auto;
 }
+.overlay-right-max > div:nth-child(2) > div {        
+    z-index: 20;
+    position: relative;
+    margin-bottom: -200px;
+    top: 0;
+    margin-top: auto;
+}
 .overlay-left > div:nth-child(1) > div {        
     z-index: 20;
     position: relative;
