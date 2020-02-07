@@ -22,7 +22,7 @@
 
                 <li class="ddown" class="ddown" v-for="category in dataContainer1.categories">
                     
-                    {% if category.details[0].id == 925 %}
+                    {% if category.id == 925 %}
                     <a :href="getCategoryUrl(category.url)">${ category.details[0].name }</a>
                     <span class="nav-direction" v-if="category.childCount" @click="slideTo(category)">
                         <i class="fa fa-lg fa-caret-right" aria-hidden="true"></i>
