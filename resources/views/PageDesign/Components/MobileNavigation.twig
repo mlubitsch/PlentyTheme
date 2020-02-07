@@ -20,12 +20,19 @@
                     </span>
                 </li>
 
-                <li class="ddown" class="ddown" v-for="category in dataContainer1.categories" v-show="App.language == 'de' && (category.id == 925 || category.id == 450)">                    
+                <li class="ddown" class="ddown" v-for="category in dataContainer1.categories" v-show="App.language == 'de' && (category.id == 449 || category.id == 894 || category.id == 893 || category.id == 452 || category.id == 476 || category.id == 588 || category.id == 585 || category.id == 876 || category.id == 587 || category.id == 589 || category.id == 451 || category.id == 925 || category.id == 450)">                    
                     <a :href="getCategoryUrl(category.url)">${ category.details[0].name }</a>
                     <span class="nav-direction" v-if="category.childCount" @click="slideTo(category)">
                         <i class="fa fa-lg fa-caret-right" aria-hidden="true"></i>
                     </span>
                 </li>
+                <li class="ddown" class="ddown" v-for="category in dataContainer1.categories" v-show="App.language == 'en' && (category.id == 925 || category.id == 450)">                    
+                    <a :href="getCategoryUrl(category.url)">${ category.details[0].name }</a>
+                    <span class="nav-direction" v-if="category.childCount" @click="slideTo(category)">
+                        <i class="fa fa-lg fa-caret-right" aria-hidden="true"></i>
+                    </span>
+                </li>
+
                 <template v-if="dataContainer1.categories[0]">
                     <li class="ddown" v-for="number in dataContainer1.categories[0].siblingCount - dataContainer1.categories.length">
                         <span class="nav-placeholder" :style="{width: (Math.random() * 20 + 60) + '%'}"></span>
