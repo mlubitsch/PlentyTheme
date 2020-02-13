@@ -16,7 +16,11 @@
                         {% if child.id == 588 %}
                             /latex-pflege-politur-waschmittel/begloss-special-wash-latex-waschmittel/special-wash-latex-waschmittel_229_1562/
                         {% elseif child.id == 587 %}
-                            /latex-pflege-politur-waschmittel/begloss-talkum-powder-latex-puder/begloss-talkum-puder_366_1297/                            
+                            /latex-pflege-politur-waschmittel/begloss-talkum-powder-latex-puder/begloss-talkum-puder_366_1297/
+                        {% elseif child.id == 590 %}
+                            /en/begloss-latex-care-products/en-begloss-talcum-powder-latex/begloss-talkum-powder_543_2194/
+                        {% elseif child.id == 899 %}
+                            /en/begloss-latex-care-products/en-latex-cleaner/begloss-special-wash-latex_495_1822/                            
                         {% else %}                        
                             {{ newScope }}{{ urls.trailingSlashSuffix }}
                         {% endif %}
@@ -106,6 +110,12 @@
                         /begloss-wetlook-pflege-produkte/begloss-special-wash-wetlook_225_1549/                                        
                     {% elseif category.id == 925 %}
                         /begloss-lack-pvc-pflege-produkte/begloss-special-wash-lack-pvc-waschmittel_554_2218/
+                    {% elseif category.id == 446 %}
+                        /en/begloss-imitation-leather-care-products/begloss-special-wash-faux-leather_496_1825/
+                    {% elseif category.id == 508 %}
+                        /en/begloss-leather-care-products/begloss-leather-polish-clean-care_212_1143/   
+                    {% elseif category.id == 496 %}
+                        /en/begloss-vinyl-pvc-care-products/begloss-special-wash-vinyl_497_1828/                    
                     {% else %}
                         {{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}
                     {% endif %}
