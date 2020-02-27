@@ -5,16 +5,6 @@
 
 <header id="page-header" class="top-bar fixed-top">
     <div>
-        <div class="top-headline">
-            <div class="row mx-0">    
-                <div class="col-12 text-center" data-text="{{ basket.shippingCountryId }}">  
-                    {% if basket.shippingCountryId == "de" or basket.shippingCountryId == "ch" %}
-                        <span class="fa fa-send">&nbsp;</span>Free shipping<span class="hidden-xs-down">&nbsp;&nbsp;|&nbsp;&nbsp;</span>              					
-					{% endif %}
-                    <a href="tel:+4989998296860"><span class="fa fa-phone">&nbsp;</span>+49 (0) 89 / 998 296 860</a>				
-                </div>
-            </div>
-        </div>
         <div class="container-max">
             <div class="row mx-0">
                 <div class="brand-wrapper brand_desktop" {% if showHeaderNavBar == "side" %}style="position: relative"{% endif %}>
