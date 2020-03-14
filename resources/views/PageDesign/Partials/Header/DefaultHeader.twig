@@ -2,7 +2,13 @@
 {% set companyName  = trans("Ceres::Template.headerCompanyName") %}
 
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
-
+<div style="display: none;">
+{{ userData | json_encode }}
+----------
+{{ user | json_encode }}
+----------
+{{ userId | json_encode }}
+</div>
 <header id="page-header" class="top-bar fixed-top">
     <div>
         <div class="top-headline">
